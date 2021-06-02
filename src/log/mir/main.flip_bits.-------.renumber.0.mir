@@ -1,0 +1,122 @@
+// MIR for `flip_bits` 0 renumber
+
+fn flip_bits(_1: u32) -> u32 {
+    debug a => _1;                       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:131:14: 131:15
+    let mut _0: u32;                     // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:131:25: 131:28
+    let mut _2: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:132:9: 132:16
+    let _4: ();                          // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+    let mut _5: ();                      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:131:1: 139:2
+    let mut _6: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:11: 134:17
+    let mut _7: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:11: 134:12
+    let mut _8: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:15: 135:18
+    let mut _9: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:21: 135:43
+    let mut _10: u32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:22: 135:30
+    let mut _11: u32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:23: 135:24
+    let mut _12: u32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:28: 135:29
+    let mut _13: (u32, bool);            // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:22: 135:30
+    let mut _14: u32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:34: 135:42
+    let mut _15: u32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:40: 135:41
+    let mut _16: (u32, bool);            // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:34: 135:42
+    let mut _17: (u32, bool);            // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:21: 135:43
+    let mut _18: (u32, bool);            // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:136:9: 136:15
+    let mut _19: !;                      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+    scope 1 {
+        debug out => _2;                 // in scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:132:9: 132:16
+        let mut _3: u32;                 // in scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:133:9: 133:14
+        scope 2 {
+            debug i => _3;               // in scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:133:9: 133:14
+        }
+    }
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:132:9: 132:16
+        _2 = const 0_u32;                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:132:19: 132:20
+        FakeRead(ForLet, _2);            // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:132:9: 132:16
+        StorageLive(_3);                 // scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:133:9: 133:14
+        _3 = const 0_u32;                // scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:133:17: 133:21
+        FakeRead(ForLet, _3);            // scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:133:9: 133:14
+        StorageLive(_4);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+        goto -> bb1;                     // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+    }
+
+    bb1: {
+        falseUnwind -> [real: bb2, cleanup: bb10]; // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+    }
+
+    bb2: {
+        StorageLive(_6);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:11: 134:17
+        StorageLive(_7);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:11: 134:12
+        _7 = _3;                         // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:11: 134:12
+        _6 = Lt(move _7, const 32_u32);  // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:11: 134:17
+        StorageDead(_7);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:16: 134:17
+        FakeRead(ForMatchedPlace, _6);   // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:11: 134:17
+        switchInt(_6) -> [false: bb4, otherwise: bb3]; // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+    }
+
+    bb3: {
+        falseEdge -> [real: bb5, imaginary: bb4]; // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+    }
+
+    bb4: {
+        _4 = const ();                   // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+        StorageDead(_6);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:137:5: 137:6
+        StorageDead(_4);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:137:5: 137:6
+        _0 = _2;                         // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:138:5: 138:8
+        StorageDead(_3);                 // scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:139:1: 139:2
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:139:1: 139:2
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:139:2: 139:2
+    }
+
+    bb5: {
+        StorageLive(_8);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:15: 135:18
+        _8 = _2;                         // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:15: 135:18
+        StorageLive(_9);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:21: 135:43
+        StorageLive(_10);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:22: 135:30
+        StorageLive(_11);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:23: 135:24
+        _11 = _1;                        // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:23: 135:24
+        StorageLive(_12);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:28: 135:29
+        _12 = _3;                        // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:28: 135:29
+        _13 = CheckedShr(_11, _12);      // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:22: 135:30
+        assert(!move (_13.1: bool), "attempt to shift right by `{}`, which would overflow", move _12) -> [success: bb6, unwind: bb10]; // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:22: 135:30
+    }
+
+    bb6: {
+        _10 = move (_13.0: u32);         // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:22: 135:30
+        StorageDead(_12);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:29: 135:30
+        StorageDead(_11);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:29: 135:30
+        StorageLive(_14);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:34: 135:42
+        StorageLive(_15);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:40: 135:41
+        _15 = _3;                        // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:40: 135:41
+        _16 = CheckedSub(const 32_u32, _15); // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:34: 135:42
+        assert(!move (_16.1: bool), "attempt to compute `{} - {}`, which would overflow", const 32_u32, move _15) -> [success: bb7, unwind: bb10]; // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:34: 135:42
+    }
+
+    bb7: {
+        _14 = move (_16.0: u32);         // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:34: 135:42
+        StorageDead(_15);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:41: 135:42
+        _17 = CheckedShl(_10, _14);      // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:21: 135:43
+        assert(!move (_17.1: bool), "attempt to shift left by `{}`, which would overflow", move _14) -> [success: bb8, unwind: bb10]; // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:21: 135:43
+    }
+
+    bb8: {
+        _9 = move (_17.0: u32);          // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:21: 135:43
+        StorageDead(_14);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:42: 135:43
+        StorageDead(_10);                // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:42: 135:43
+        _2 = BitOr(move _8, move _9);    // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:9: 135:43
+        StorageDead(_9);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:42: 135:43
+        StorageDead(_8);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:135:42: 135:43
+        _18 = CheckedAdd(_3, const 1_u32); // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:136:9: 136:15
+        assert(!move (_18.1: bool), "attempt to compute `{} + {}`, which would overflow", _3, const 1_u32) -> [success: bb9, unwind: bb10]; // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:136:9: 136:15
+    }
+
+    bb9: {
+        _3 = move (_18.0: u32);          // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:136:9: 136:15
+        _5 = const ();                   // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:18: 137:6
+        StorageDead(_6);                 // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:137:5: 137:6
+        goto -> bb1;                     // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:134:5: 137:6
+    }
+
+    bb10 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:131:1: 139:2
+    }
+}

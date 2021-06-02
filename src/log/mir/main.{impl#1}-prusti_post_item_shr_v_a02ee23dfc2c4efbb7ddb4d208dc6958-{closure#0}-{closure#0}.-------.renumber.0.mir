@@ -1,0 +1,15 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 717:2>::prusti_post_item_shr_v_a02ee23dfc2c4efbb7ddb4d208dc6958::{closure#0}::{closure#0}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 717:2>::prusti_post_item_shr_v_a02ee23dfc2c4efbb7ddb4d208dc6958::{closure#0}::{closure#0}(_1: &'_#6r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20]) -> bool {
+    debug i => (*((*_1).0: &'_#8r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:608:17: 608:18
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:19: 609:20
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:19: 609:20
+        _2 = (*((*_1).0: &'_#5r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:19: 609:20
+        _0 = Le(const 0_usize, move _2); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:19: 609:20
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:20: 609:20
+    }
+}

@@ -1,0 +1,44 @@
+// MIR for `prusti_post_item_look_up_bit_0796582d9d734b31bf3c1118afb59f1e::{closure#0}` 0 renumber
+
+fn prusti_post_item_look_up_bit_0796582d9d734b31bf3c1118afb59f1e::{closure#0}(_1: &'_#7r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37]) -> bool {
+    debug result => (*((*_1).0: &'_#9r u8)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:117:1: 123:2
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37
+    let mut _2: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:22
+    let mut _3: u8;                      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:17
+    let mut _4: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:26: 116:37
+    let mut _5: u8;                      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:26: 116:32
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:22
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:17
+        _3 = (*((*_1).0: &'_#5r u8));    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:17
+        _2 = Eq(move _3, const 0_u8);    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:22
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:21: 116:22
+        switchInt(move _2) -> [false: bb3, otherwise: bb1]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37
+    }
+
+    bb1: {
+        _0 = const true;                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37
+        goto -> bb4;                     // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37
+    }
+
+    bb2: {
+        _0 = const false;                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37
+        goto -> bb4;                     // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37
+    }
+
+    bb3: {
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:26: 116:37
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:26: 116:32
+        _5 = (*((*_1).0: &'_#6r u8));    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:26: 116:32
+        _4 = Eq(move _5, const 1_u8);    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:26: 116:37
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:36: 116:37
+        switchInt(move _4) -> [false: bb2, otherwise: bb1]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:11: 116:37
+    }
+
+    bb4: {
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:36: 116:37
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:36: 116:37
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:116:37: 116:37
+    }
+}

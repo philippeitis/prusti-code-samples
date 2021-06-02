@@ -1,0 +1,10 @@
+// MIR for `BoolArr32::v::{constant#0}` 0 renumber
+
+BoolArr32::v::{constant#0}: usize = {
+    let mut _0: usize;                   // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:142:15: 142:17
+
+    bb0: {
+        _0 = const 32_usize;             // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:142:15: 142:17
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:142:15: 142:17
+    }
+}

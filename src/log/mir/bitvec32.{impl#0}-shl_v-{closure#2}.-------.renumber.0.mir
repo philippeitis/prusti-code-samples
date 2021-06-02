@@ -1,0 +1,41 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::shl_v::{closure#2}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::shl_v::{closure#2}(_1: &'_#23r [closure@/home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15]) -> () {
+    debug i => (*((*_1).0: &'_#39r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:123:13: 123:18
+    debug amt => (*((*_1).1: &'_#40r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:121:21: 121:24
+    debug out => (*((*_1).2: &'_#41r BitVec32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:122:13: 122:20
+    debug self => (*((*_1).3: &'_#42r &'_#43r BitVec32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:121:14: 121:19
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 133:13
+    let _2: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+    let mut _3: &'_#34r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+    let mut _4: &'_#35r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+    let mut _5: &'_#36r BitVec32;        // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+    let mut _6: &'_#37r &'_#38r BitVec32; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        _3 = &'_#9r (*((*_1).0: &'_#10r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        _4 = &'_#11r (*((*_1).1: &'_#12r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        _5 = &'_#13r (*((*_1).2: &'_#14r BitVec32)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        _6 = &'_#15r (*((*_1).3: &'_#16r &'_#17r BitVec32)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        _2 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15] { i: move _3, amt: move _4, out: move _5, self: move _6 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+                                         // closure
+                                         // + def_id: DefId(0:78 ~ bitvec32[8787]::{impl#0}::shl_v::{closure#2}::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn((usize,)),
+                                         //     (&'_#18r usize, &'_#19r usize, &'_#20r BitVec32, &'_#21r &'_#22r BitVec32),
+                                         // ]
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:139:14: 139:15
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:139:14: 139:15
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:139:14: 139:15
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:139:14: 139:15
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:139:14: 139:15
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:133:13: 139:15
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:139:15: 139:15
+    }
+}

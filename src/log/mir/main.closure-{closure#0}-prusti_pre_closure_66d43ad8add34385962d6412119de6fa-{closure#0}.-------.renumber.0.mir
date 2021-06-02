@@ -1,0 +1,20 @@
+// MIR for `closure::{closure#0}::prusti_pre_closure_66d43ad8add34385962d6412119de6fa::{closure#0}` 0 renumber
+
+fn closure::{closure#0}::prusti_pre_closure_66d43ad8add34385962d6412119de6fa::{closure#0}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:19: 427:24]) -> bool {
+    debug a => (*((*_1).0: &'_#11r i32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:429:10: 429:11
+    debug b => (*((*_1).1: &'_#12r i32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:429:18: 429:19
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:19: 427:24
+    let mut _2: i32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:19: 427:20
+    let mut _3: i32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:23: 427:24
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:19: 427:20
+        _2 = (*((*_1).0: &'_#6r i32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:19: 427:20
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:23: 427:24
+        _3 = (*((*_1).1: &'_#7r i32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:23: 427:24
+        _0 = Gt(move _2, move _3);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:19: 427:24
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:23: 427:24
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:23: 427:24
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:427:24: 427:24
+    }
+}

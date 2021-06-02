@@ -1,0 +1,24 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::and` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::and(_1: &'_#5r BitVec32, _2: &'_#6r BitVec32) -> BitVec32 {
+    debug self => _1;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:292:12: 292:17
+    debug other => _2;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:292:19: 292:24
+    let mut _0: BitVec32;                // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:292:40: 292:48
+    let mut _3: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:23: 293:39
+    let mut _4: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:23: 293:29
+    let mut _5: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:32: 293:39
+
+    bb0: {
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:23: 293:39
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:23: 293:29
+        _4 = ((*_1).0: u32);             // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:23: 293:29
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:32: 293:39
+        _5 = ((*_2).0: u32);             // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:32: 293:39
+        _3 = BitAnd(move _4, move _5);   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:23: 293:39
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:38: 293:39
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:38: 293:39
+        _0 = BitVec32 { v: move _3 };    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:9: 293:41
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:293:40: 293:41
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:294:6: 294:6
+    }
+}

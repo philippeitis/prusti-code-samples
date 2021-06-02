@@ -1,0 +1,20 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 767:2>::prusti_post_item_shl_v_265341fbe2dc44cb9b9212a3ce80eddd::{closure#0}::{closure#1}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 767:2>::prusti_post_item_shl_v_265341fbe2dc44cb9b9212a3ce80eddd::{closure#0}::{closure#1}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:24: 544:31]) -> bool {
+    debug i => (*((*_1).0: &'_#11r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:543:17: 543:18
+    debug amt => (*((*_1).1: &'_#12r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:548:21: 548:24
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:24: 544:31
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:24: 544:25
+    let mut _3: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:28: 544:31
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:24: 544:25
+        _2 = (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:24: 544:25
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:28: 544:31
+        _3 = (*((*_1).1: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:28: 544:31
+        _0 = Lt(move _2, move _3);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:24: 544:31
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:30: 544:31
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:30: 544:31
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:544:31: 544:31
+    }
+}

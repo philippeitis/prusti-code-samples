@@ -1,0 +1,25 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:8:1: 130:2>::len` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:8:1: 130:2>::len(_1: &'_#5r PrustiVec) -> usize {
+    debug self => _1;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:13:12: 13:17
+    let mut _0: usize;                   // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:13:22: 13:27
+    let mut _2: &'_#6r std::vec::Vec<u8>; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:14:9: 14:15
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:14:9: 14:15
+        _2 = &'_#4r ((*_1).0: std::vec::Vec<u8>); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:14:9: 14:15
+        _0 = std::vec::Vec::<u8>::len(move _2) -> [return: bb1, unwind: bb2]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:14:9: 14:21
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:14:16: 14:19
+                                         // + literal: Const { ty: for<'r> fn(&'r std::vec::Vec<u8>) -> usize {std::vec::Vec::<u8>::len}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:14:20: 14:21
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:15:6: 15:6
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:13:5: 15:6
+    }
+}

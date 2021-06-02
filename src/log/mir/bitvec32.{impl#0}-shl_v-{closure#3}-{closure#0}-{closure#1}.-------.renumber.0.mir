@@ -1,0 +1,20 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::shl_v::{closure#3}::{closure#0}::{closure#1}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::shl_v::{closure#3}::{closure#0}::{closure#1}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:32: 142:39]) -> bool {
+    debug j => (*((*_1).0: &'_#11r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:141:25: 141:26
+    debug amt => (*((*_1).1: &'_#12r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:121:21: 121:24
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:32: 142:39
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:32: 142:33
+    let mut _3: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:36: 142:39
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:32: 142:33
+        _2 = (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:32: 142:33
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:36: 142:39
+        _3 = (*((*_1).1: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:36: 142:39
+        _0 = Lt(move _2, move _3);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:32: 142:39
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:38: 142:39
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:38: 142:39
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:142:39: 142:39
+    }
+}

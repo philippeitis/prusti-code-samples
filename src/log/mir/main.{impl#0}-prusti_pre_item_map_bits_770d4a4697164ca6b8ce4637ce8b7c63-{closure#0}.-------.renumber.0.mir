@@ -1,0 +1,19 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:145:1: 422:2>::prusti_pre_item_map_bits_770d4a4697164ca6b8ce4637ce8b7c63::{closure#0}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:145:1: 422:2>::prusti_pre_item_map_bits_770d4a4697164ca6b8ce4637ce8b7c63::{closure#0}(_1: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:382:16: 382:17]) -> F {
+    debug f => (_1.0: F);                // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:392:70: 392:71
+    let mut _0: F;                       // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:382:16: 382:16
+
+    bb0: {
+        _0 = move (_1.0: F);             // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:382:16: 382:17
+        drop(_1) -> [return: bb1, unwind: bb2]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:382:16: 382:17
+    }
+
+    bb1: {
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:382:17: 382:17
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:382:16: 382:17
+    }
+}

@@ -1,0 +1,20 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shl::{closure#2}::{closure#0}::{closure#1}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shl::{closure#2}::{closure#0}::{closure#1}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:32: 250:37]) -> bool {
+    debug j => (*((*_1).0: &'_#11r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:249:25: 249:26
+    debug i => (*((*_1).1: &'_#12r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:238:13: 238:18
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:32: 250:37
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:32: 250:33
+    let mut _3: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:36: 250:37
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:32: 250:33
+        _2 = (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:32: 250:33
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:36: 250:37
+        _3 = (*((*_1).1: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:36: 250:37
+        _0 = Lt(move _2, move _3);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:32: 250:37
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:36: 250:37
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:36: 250:37
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:250:37: 250:37
+    }
+}

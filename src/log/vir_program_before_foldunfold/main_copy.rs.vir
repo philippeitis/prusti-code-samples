@@ -1,0 +1,723 @@
+function m_len(_1: Ref(m_PrustiVec$_beg_$_end_)): Int
+  requires (acc(m_PrustiVec$_beg_$_end_(_1), read)) && (true)
+  requires true
+  ensures ((0) <= (__result)) && (true)
+
+
+function m_lookup(_1: Ref(m_PrustiVec$_beg_$_end_), _2: Int): Int
+  requires (acc(m_PrustiVec$_beg_$_end_(_1), read)) && (true)
+  requires (((0) <= (_2)) && (((_2) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1))) && (true))) && (true)
+  ensures true
+
+
+method m_pop(2 args)
+    returns (_0: Ref(u8))
+{
+    __t0: Bool
+    __t1: Bool
+    __t2: Bool
+    __t3: Bool
+    __t4: Bool
+    _old$pre$0: Ref(m_PrustiVec$_beg_$_end_)
+    _1: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _2: Ref(usize)
+    _3: Ref(usize)
+    _4: Ref(usize)
+    _5: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _6: Ref(tuple2$usize$bool)
+    _7: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _8: Ref(usize)
+  label start // 0
+    // ========== start ==========
+    // Def path: "main_copy::{impl#0}::pop"
+    // Span: /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:86:5: 89:6 (#0)
+    __t0 := copy false
+    __t1 := copy false
+    __t2 := copy false
+    __t3 := copy false
+    // Preconditions:
+    inhale(Stmt) (acc(_1.val_ref, write)) && ((acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)) && ((acc(usize(_2), write)) && (true)))
+    inhale(Stmt) true
+    inhale(Stmt) (ref$m_PrustiVec$_beg_$_end_$inv<Ref(ref$m_PrustiVec$_beg_$_end_),Bool>(_1)) && ((usize$inv<Ref(usize),Bool>(_2)) && (true))
+    inhale(Expr) ((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)) >= (1)) && (true)
+    label pre
+    Goto(cfg:2)
+  label return // 1
+    // ========== return ==========
+    // Target of any 'return' statement.
+    // Exhale postcondition
+    label l10
+    // Fold predicates for &mut args and transfer borrow permissions to old
+    obtain acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)
+    _old$pre$0 := move _1.val_ref
+    // Fold the result
+    obtain acc(u8(_0), write)
+    // Assert possible strengthening
+    // Assert functional specification of postcondition
+    assert(Expr) ((!(false))?((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_old$pre$0)) == ((old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))) - (1))):(false)) && (((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_old$pre$0)) >= (0)) && (((!(false))?((_0.val_int) == (old[pre](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)) - (1))))):(false)) && ((forall _2_forall_17e89a34264844e8a72ffb3c4cba462b_101: Int  :: (((0) <= (_2_forall_17e89a34264844e8a72ffb3c4cba462b_101)) && (((_2_forall_17e89a34264844e8a72ffb3c4cba462b_101) < (old[pre](_2.val_int))) && (((_2_forall_17e89a34264844e8a72ffb3c4cba462b_101) < (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) && (((_2_forall_17e89a34264844e8a72ffb3c4cba462b_101) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_old$pre$0))) && (true))))) ==> ((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_old$pre$0, _2_forall_17e89a34264844e8a72ffb3c4cba462b_101)) == (old[pre](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_17e89a34264844e8a72ffb3c4cba462b_101))))) && (true))))
+    // Assert type invariants
+    assert(Stmt) (m_PrustiVec$_beg_$_end_$inv<Ref(m_PrustiVec$_beg_$_end_),Bool>(_old$pre$0)) && ((u8$inv<Ref(u8),Bool>(_0)) && (true))
+    // Exhale permissions of postcondition (1/3)
+    exhale (acc(m_PrustiVec$_beg_$_end_(_old$pre$0), write)) && (true)
+    // Exhale permissions of postcondition (2/3)
+    exhale acc(u8(_0), write)
+    // Exhale permissions of postcondition (3/3)
+    Return
+  label bb0 // 2
+    // ========== bb0 ==========
+    __t0 := copy true
+    // [mir] StorageLive(_3)
+    // [mir] StorageLive(_4)
+    // [mir] StorageLive(_5)
+    // [mir] _5 = &'_ (*_1)
+    _5 := builtin$havoc_ref()
+    inhale(Stmt) acc(_5.val_ref, write)
+    _5.val_ref := borrow _1.val_ref // L0
+    label l0
+    // [mir] _4 = PrustiVec::len(move _5) -> [return: bb1, unwind: bb4]
+    label l1
+    _4 := builtin$havoc_ref()
+    inhale(Stmt) acc(usize(_4), write)
+    inhale(Stmt) (_4.val_int) == (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_5.val_ref))
+    transfer perm _5.val_ref --> old[l1](_5.val_ref) // unchecked: false
+    Goto(cfg:3)
+  label l2 // 3
+    // ========== l2 ==========
+    // MIR edge bb0 --> bb1
+    // Expire borrows
+    expire_borrows ReborrowingDAG(L6,L0,)
+
+    Goto(cfg:4)
+  label bb1 // 4
+    // ========== bb1 ==========
+    __t1 := copy true
+    // [mir] StorageDead(_5)
+    // [mir] _6 = CheckedSub(_4, const 1_usize)
+    _6 := builtin$havoc_ref()
+    inhale(Stmt) acc(_6.tuple_0, write)
+    inhale(Stmt) acc(_6.tuple_0.val_int, write)
+    inhale(Stmt) acc(_6.tuple_1, write)
+    inhale(Stmt) acc(_6.tuple_1.val_bool, write)
+    _6.tuple_0.val_int := copy (_4.val_int) - (1)
+    _6.tuple_1.val_bool := copy false
+    // [mir] assert(!move (_6.1: bool), "attempt to compute `{} - {}`, which would overflow", move _4, const 1_usize) -> [success: bb2, unwind: bb4]
+    __t4 := copy _6.tuple_1.val_bool
+    // Rust assertion: attempt to subtract with overflow
+    assert(Stmt) !(__t4)
+    Goto(cfg:5)
+  label bb2 // 5
+    // ========== bb2 ==========
+    __t2 := copy true
+    // [mir] _3 = move (_6.0: usize)
+    _3 := move _6.tuple_0
+    label l3
+    // [mir] StorageDead(_4)
+    // [mir] FakeRead(ForLet, _3)
+    // [mir] StorageLive(_7)
+    // [mir] _7 = &'_ mut (*_1)
+    _7 := builtin$havoc_ref()
+    inhale(Stmt) acc(_7.val_ref, write)
+    _7.val_ref := mut borrow _1.val_ref // L1
+    label l4
+    // [mir] StorageLive(_8)
+    // [mir] _8 = _3
+    _8 := builtin$havoc_ref()
+    inhale(Stmt) acc(_8.val_int, write)
+    _8.val_int := copy _3.val_int
+    label l5
+    // [mir] _0 = PrustiVec::remove(move _7, move _8) -> [return: bb3, unwind: bb4]
+    label l6
+    assert(Stmt) (((0) <= (_8.val_int)) && (((_8.val_int) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_7.val_ref))) && (true))) && (true)
+    assert(Stmt) (ref$m_PrustiVec$_beg_$_end_$inv<Ref(ref$m_PrustiVec$_beg_$_end_),Bool>(_7)) && ((usize$inv<Ref(usize),Bool>(_8)) && (true))
+    exhale (acc(_7.val_ref, write)) && ((acc(m_PrustiVec$_beg_$_end_(_7.val_ref), write)) && ((acc(usize(_8), write)) && (true)))
+    _0 := builtin$havoc_ref()
+    inhale(Stmt) (acc(m_PrustiVec$_beg_$_end_(old[l6](_7.val_ref)), write)) && (true)
+    inhale(Stmt) acc(u8(_0), write)
+    inhale(Stmt) (m_PrustiVec$_beg_$_end_$inv<Ref(m_PrustiVec$_beg_$_end_),Bool>(old[l6](_7.val_ref))) && ((u8$inv<Ref(u8),Bool>(_0)) && (true))
+    inhale(Expr) ((!(false))?((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(old[l6](_7.val_ref))) == ((old[l6](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_7.val_ref))) - (1))):(false)) && (((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(old[l6](_7.val_ref))) >= (0)) && (((_0.val_int) == (old[l6](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_7.val_ref, _8.val_int)))) && ((forall _2_forall_732e1c4a23be4862aef2a28a0def3dac_101: Int  :: (((0) <= (_2_forall_732e1c4a23be4862aef2a28a0def3dac_101)) && (((_2_forall_732e1c4a23be4862aef2a28a0def3dac_101) < (old[l6](_8.val_int))) && (((_2_forall_732e1c4a23be4862aef2a28a0def3dac_101) < (old[l6](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_7.val_ref)))) && (((_2_forall_732e1c4a23be4862aef2a28a0def3dac_101) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(old[l6](_7.val_ref)))) && (true))))) ==> ((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(old[l6](_7.val_ref), _2_forall_732e1c4a23be4862aef2a28a0def3dac_101)) == (old[l6](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_7.val_ref, _2_forall_732e1c4a23be4862aef2a28a0def3dac_101))))) && ((forall _2_forall_121182d467e646a98eb9b9acbe8d967a_101: Int  :: (((1) <= (_2_forall_121182d467e646a98eb9b9acbe8d967a_101)) && (((old[l6](_8.val_int)) <= (_2_forall_121182d467e646a98eb9b9acbe8d967a_101)) && (((_2_forall_121182d467e646a98eb9b9acbe8d967a_101) < (old[l6](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_7.val_ref)))) && (((_2_forall_121182d467e646a98eb9b9acbe8d967a_101) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(old[l6](_7.val_ref)))) && (true))))) ==> ((!(false))?((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(old[l6](_7.val_ref), (_2_forall_121182d467e646a98eb9b9acbe8d967a_101) - (1))) == (old[l6](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_7.val_ref, _2_forall_121182d467e646a98eb9b9acbe8d967a_101)))):(false))) && (true)))))
+    exhale true
+    label l7
+    Goto(cfg:6)
+  label l8 // 6
+    // ========== l8 ==========
+    // MIR edge bb2 --> bb3
+    // Expire borrows
+    expire_borrows ReborrowingDAG(L5,L1,)
+
+    Goto(cfg:7)
+  label bb3 // 7
+    // ========== bb3 ==========
+    __t3 := copy true
+    // [mir] StorageDead(_8)
+    // [mir] StorageDead(_7)
+    // [mir] StorageDead(_3)
+    // [mir] return
+    Goto(cfg:1)
+  label end_of_method
+}
+
+
+method m_append(2 args)
+    returns (_0: Ref(tuple0$))
+{
+    __t0: Bool
+    __t1: Bool
+    __t2: Bool
+    __t3: Bool
+    __t4: Bool
+    __t5: Bool
+    __t6: Bool
+    __t7: Bool
+    __t8: Bool
+    __t9: Bool
+    __t10: Bool
+    __t11: Bool
+    __t12: Bool
+    __t13: Bool
+    __t14: Bool
+    __t15: Bool
+    __t16: Bool
+    __t17: Bool
+    __t18: Bool
+    __t19: Bool
+    __t20: Bool
+    _preserve$0: Ref(AuxRef)
+    _preserve$1: Ref(AuxRef)
+    __t21: Bool
+    __t22: Bool
+    __t23: Bool
+    __t24: Bool
+    __t25: Bool
+    __t26: Bool
+    _old$pre$0: Ref(m_PrustiVec$_beg_$_end_)
+    _old$pre$1: Ref(m_PrustiVec$_beg_$_end_)
+    _1: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _2: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _3: Ref(usize)
+    _4: Ref(usize)
+    _5: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _6: Ref(tuple0$)
+    _7: Ref(bool)
+    _8: Ref(usize)
+    _9: Ref(usize)
+    _10: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _11: Ref(tuple0$)
+    _12: Ref(bool)
+    _13: Ref(closure$0_80$3$13956227077111775722)
+    _14: Ref(ref$usize)
+    _15: Ref(ref$ref$m_PrustiVec$_beg_$_end_)
+    _16: Ref(tuple0$)
+    _17: Ref(bool)
+    _18: Ref(closure$0_83$3$2188508278497531086)
+    _19: Ref(ref$ref$m_PrustiVec$_beg_$_end_)
+    _20: Ref(ref$usize)
+    _21: Ref(tuple0$)
+    _22: Ref(bool)
+    _23: Ref(closure$0_85$3$9515075194789978483)
+    _24: Ref(ref$usize)
+    _25: Ref(ref$ref$m_PrustiVec$_beg_$_end_)
+    _26: Ref(ref$ref$m_PrustiVec$_beg_$_end_)
+    _27: Ref(tuple0$)
+    _28: Ref(bool)
+    _29: Ref(closure$0_93$3$491768186849240823)
+    _30: Ref(ref$ref$m_PrustiVec$_beg_$_end_)
+    _31: Ref(tuple0$)
+    _32: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _33: Ref(u8)
+    _34: Ref(ref$m_PrustiVec$_beg_$_end_)
+    _35: Ref(usize)
+    _36: Ref(tuple2$usize$bool)
+    _37: Ref(never)
+  label start // 0
+    // ========== start ==========
+    // Def path: "main_copy::{impl#0}::append"
+    // Span: /home/philippe/VSCodeProjects/prusti_0/src/main_copy.rs:104:5: 127:6 (#0)
+    __t0 := copy false
+    __t1 := copy false
+    __t2 := copy false
+    __t3 := copy false
+    __t4 := copy false
+    __t5 := copy false
+    __t6 := copy false
+    __t7 := copy false
+    __t8 := copy false
+    __t9 := copy false
+    __t10 := copy false
+    __t11 := copy false
+    __t12 := copy false
+    __t13 := copy false
+    __t14 := copy false
+    __t15 := copy false
+    __t16 := copy false
+    __t17 := copy false
+    __t18 := copy false
+    // Preconditions:
+    inhale(Stmt) (acc(_1.val_ref, write)) && ((acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)) && ((acc(_2.val_ref, write)) && ((acc(m_PrustiVec$_beg_$_end_(_2.val_ref), read)) && (true))))
+    inhale(Stmt) true
+    inhale(Stmt) (ref$m_PrustiVec$_beg_$_end_$inv<Ref(ref$m_PrustiVec$_beg_$_end_),Bool>(_1)) && ((ref$m_PrustiVec$_beg_$_end_$inv<Ref(ref$m_PrustiVec$_beg_$_end_),Bool>(_2)) && (true))
+    inhale(Expr) true
+    label pre
+    Goto(cfg:2)
+  label return // 1
+    // ========== return ==========
+    // Target of any 'return' statement.
+    // Exhale postcondition
+    label l25
+    // Fold predicates for &mut args and transfer borrow permissions to old
+    obtain acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)
+    _old$pre$0 := move _1.val_ref
+    obtain acc(m_PrustiVec$_beg_$_end_(_2.val_ref), write)
+    _old$pre$1 := move _2.val_ref
+    // Fold the result
+    obtain acc(tuple0$(_0), write)
+    // Assert possible strengthening
+    // Assert functional specification of postcondition
+    assert(Expr) ((!(false))?((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_old$pre$0)) == ((old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))) + (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_old$pre$1)))):(false)) && ((forall _2_forall_e1d93c1962be4adfbf0e162dc278fc3e_101: Int  :: (((0) <= (_2_forall_e1d93c1962be4adfbf0e162dc278fc3e_101)) && (((_2_forall_e1d93c1962be4adfbf0e162dc278fc3e_101) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_old$pre$1))) && (true))) ==> ((!(false))?((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_old$pre$0, (_2_forall_e1d93c1962be4adfbf0e162dc278fc3e_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))))) == (m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_old$pre$1, _2_forall_e1d93c1962be4adfbf0e162dc278fc3e_101))):(false))) && ((forall _2_forall_e437fb4754a0468f841fbefafc24f037_101: Int  :: (((0) <= (_2_forall_e437fb4754a0468f841fbefafc24f037_101)) && (((_2_forall_e437fb4754a0468f841fbefafc24f037_101) < (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) && (true))) ==> ((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_old$pre$0, _2_forall_e437fb4754a0468f841fbefafc24f037_101)) == (old[pre](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_e437fb4754a0468f841fbefafc24f037_101))))) && (true)))
+    // Assert type invariants
+    assert(Stmt) (m_PrustiVec$_beg_$_end_$inv<Ref(m_PrustiVec$_beg_$_end_),Bool>(_old$pre$0)) && ((tuple0$$inv<Ref(tuple0$),Bool>(_0)) && (true))
+    // Exhale permissions of postcondition (1/3)
+    exhale (acc(m_PrustiVec$_beg_$_end_(_old$pre$0), write)) && ((acc(m_PrustiVec$_beg_$_end_(_old$pre$1), read)) && (true))
+    // Exhale permissions of postcondition (2/3)
+    exhale acc(tuple0$(_0), write)
+    // Exhale permissions of postcondition (3/3)
+    Return
+  label bb0 // 2
+    // ========== bb0 ==========
+    __t0 := copy true
+    // [mir] StorageLive(_3)
+    // [mir] _3 = const 0_usize
+    _3 := builtin$havoc_ref()
+    inhale(Stmt) acc(_3.val_int, write)
+    _3.val_int := copy 0
+    // [mir] FakeRead(ForLet, _3)
+    // [mir] StorageLive(_4)
+    // [mir] StorageLive(_5)
+    // [mir] _5 = &'_ (*_1)
+    _5 := builtin$havoc_ref()
+    inhale(Stmt) acc(_5.val_ref, write)
+    _5.val_ref := borrow _1.val_ref // L0
+    label l0
+    // [mir] _4 = PrustiVec::len(move _5) -> [return: bb1, unwind: bb23]
+    label l1
+    _4 := builtin$havoc_ref()
+    inhale(Stmt) acc(usize(_4), write)
+    inhale(Stmt) (_4.val_int) == (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_5.val_ref))
+    transfer perm _5.val_ref --> old[l1](_5.val_ref) // unchecked: false
+    Goto(cfg:3)
+  label l2 // 3
+    // ========== l2 ==========
+    // MIR edge bb0 --> bb1
+    // Expire borrows
+    expire_borrows ReborrowingDAG(L16,L0,)
+
+    Goto(cfg:4)
+  label bb1 // 4
+    // ========== bb1 ==========
+    __t1 := copy true
+    // [mir] StorageDead(_5)
+    // [mir] FakeRead(ForLet, _4)
+    // [mir] goto -> bb2
+    Goto(cfg:5)
+  label loop2_start // 5
+    // ========== loop2_start ==========
+    Goto(cfg:6)
+  label loop2_group1_bb2 // 6
+    // ========== loop2_group1_bb2 ==========
+    // This is a loop head
+    __t2 := copy true
+    // [mir] falseUnwind -> [real: bb3, cleanup: bb23]
+    Goto(cfg:7)
+  label loop2_group1_bb3 // 7
+    // ========== loop2_group1_bb3 ==========
+    __t3 := copy true
+    // [mir] StorageLive(_7)
+    // [mir] StorageLive(_8)
+    // [mir] _8 = _3
+    _8 := builtin$havoc_ref()
+    inhale(Stmt) acc(_8.val_int, write)
+    _8.val_int := copy _3.val_int
+    label l3
+    // [mir] StorageLive(_9)
+    // [mir] StorageLive(_10)
+    // [mir] _10 = &'_ (*_2)
+    _10 := builtin$havoc_ref()
+    inhale(Stmt) acc(_10.val_ref, write)
+    _10.val_ref := borrow _2.val_ref // L19
+    label l4
+    // [mir] _9 = PrustiVec::len(move _10) -> [return: bb4, unwind: bb23]
+    label l5
+    _9 := builtin$havoc_ref()
+    inhale(Stmt) acc(usize(_9), write)
+    inhale(Stmt) (_9.val_int) == (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_10.val_ref))
+    transfer perm _10.val_ref --> old[l5](_10.val_ref) // unchecked: false
+    Goto(cfg:8)
+  label l6 // 8
+    // ========== l6 ==========
+    // MIR edge bb3 --> bb4
+    // Expire borrows
+    expire_borrows ReborrowingDAG(L15,L19,)
+
+    Goto(cfg:9)
+  label loop2_group1_bb4 // 9
+    // ========== loop2_group1_bb4 ==========
+    __t4 := copy true
+    // [mir] StorageDead(_10)
+    // [mir] _7 = Lt(move _8, move _9)
+    _7 := builtin$havoc_ref()
+    inhale(Stmt) acc(_7.val_bool, write)
+    _7.val_bool := copy (_8.val_int) < (_9.val_int)
+    // [mir] StorageDead(_9)
+    // [mir] StorageDead(_8)
+    // [mir] FakeRead(ForMatchedPlace, _7)
+    // [mir] switchInt(_7) -> [false: bb6, otherwise: bb5]
+    __t19 := copy _7.val_bool
+    GotoSwitch([(Local(__t19: Bool, Position { line: 0, column: 0, id: 0 }), cfg:11)], cfg:10)
+  label l7 // 10
+    // ========== l7 ==========
+    // MIR edge bb4 --> bb6
+    Goto(cfg:38)
+  label l8 // 11
+    // ========== l8 ==========
+    // MIR edge bb4 --> bb5
+    Goto(cfg:12)
+  label loop2_group2_bb5 // 12
+    // ========== loop2_group2_bb5 ==========
+    __t5 := copy true
+    // [mir] falseEdge -> [real: bb7, imaginary: bb6]
+    Goto(cfg:13)
+  label loop2_group2_bb7 // 13
+    // ========== loop2_group2_bb7 ==========
+    __t6 := copy true
+    // [mir] StorageLive(_11)
+    // [mir] StorageLive(_12)
+    // [mir] _12 = const false
+    _12 := builtin$havoc_ref()
+    inhale(Stmt) acc(_12.val_bool, write)
+    _12.val_bool := copy false
+    // [mir] switchInt(move _12) -> [false: bb9, otherwise: bb8]
+    __t20 := copy _12.val_bool
+    // Ignore default target bb8, as it is only used by Prusti to type-check a loop invariant.
+    Goto(cfg:14)
+  label loop2_inv_pre // 14
+    // ========== loop2_inv_pre ==========
+    // Assert and exhale the loop body invariant (loop head: bb2)
+    _preserve$0 := ghost _1.val_ref
+    _preserve$1 := ghost _2.val_ref
+    obtain acc(bool(_7), write)
+    obtain acc(usize(_3), write)
+    obtain acc(_1.val_ref, read)
+    obtain acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)
+    obtain acc(_2.val_ref, read)
+    assert(Expr) (((0) <= (_3.val_int)) && (((_3.val_int) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_2.val_ref))) && (true))) && (((!(false))?((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)) == ((old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))) + (_3.val_int))):(false)) && ((forall _2_forall_2c518904a6a245949a19dd8c13ed41e3_101: Int  :: ((((0) <= (_2_forall_2c518904a6a245949a19dd8c13ed41e3_101)) && (((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) < (_3.val_int)) && (true))) && ((((!(false))?((0) <= ((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))))):(false)) && (((!(false))?(((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))):(false)) && (true))) && (((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_2.val_ref))) && (true)))) ==> ((!(false))?((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, (_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))))) == (m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_2.val_ref, _2_forall_2c518904a6a245949a19dd8c13ed41e3_101))):(false))) && ((forall _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101: Int  :: (((0) <= (_2_forall_13192bc222e64cbcab6eed54bb1b9c53_101)) && (((_2_forall_13192bc222e64cbcab6eed54bb1b9c53_101) < (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) && (true))) ==> ((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101)) == (old[pre](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101))))) && (true))))
+    assert(Expr) ((_preserve$0) == (_1.val_ref)) && (((_preserve$1) == (_2.val_ref)) && (true))
+    exhale (acc(bool(_7), write)) && ((acc(usize(_3), write)) && ((acc(_1.val_ref, read)) && ((acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)) && ((acc(_2.val_ref, read)) && (true)))))
+    _31 := builtin$havoc_ref()
+    __t11 := builtin$havoc_bool()
+    __t3 := builtin$havoc_bool()
+    __t8 := builtin$havoc_bool()
+    __t4 := builtin$havoc_bool()
+    _32 := builtin$havoc_ref()
+    __t22 := builtin$havoc_bool()
+    __t21 := builtin$havoc_bool()
+    __t12 := builtin$havoc_bool()
+    _17 := builtin$havoc_ref()
+    __t26 := builtin$havoc_bool()
+    __t23 := builtin$havoc_bool()
+    __t25 := builtin$havoc_bool()
+    _22 := builtin$havoc_ref()
+    __t24 := builtin$havoc_bool()
+    _7 := builtin$havoc_ref()
+    _33 := builtin$havoc_ref()
+    __t16 := builtin$havoc_bool()
+    _28 := builtin$havoc_ref()
+    _3 := builtin$havoc_ref()
+    _8 := builtin$havoc_ref()
+    __t9 := builtin$havoc_bool()
+    __t6 := builtin$havoc_bool()
+    __t2 := builtin$havoc_bool()
+    _12 := builtin$havoc_ref()
+    _34 := builtin$havoc_ref()
+    __t13 := builtin$havoc_bool()
+    __t14 := builtin$havoc_bool()
+    _36 := builtin$havoc_ref()
+    _35 := builtin$havoc_ref()
+    __t15 := builtin$havoc_bool()
+    __t5 := builtin$havoc_bool()
+    __t7 := builtin$havoc_bool()
+    __t17 := builtin$havoc_bool()
+    __t10 := builtin$havoc_bool()
+    _9 := builtin$havoc_ref()
+    _10 := builtin$havoc_ref()
+    Goto(cfg:15)
+  label loop2_inv_post // 15
+    // ========== loop2_inv_post ==========
+    // Inhale the loop invariant of block bb2
+    inhale(Stmt) (acc(bool(_7), write)) && ((acc(usize(_3), write)) && ((acc(_1.val_ref, read)) && ((acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)) && ((acc(_2.val_ref, read)) && (true)))))
+    inhale(Expr) ((_preserve$0) == (_1.val_ref)) && (((_preserve$1) == (_2.val_ref)) && (true))
+    inhale(Expr) (((0) <= (_3.val_int)) && (((_3.val_int) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_2.val_ref))) && (true))) && (((!(false))?((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)) == ((old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))) + (_3.val_int))):(false)) && ((forall _2_forall_2c518904a6a245949a19dd8c13ed41e3_101: Int  :: ((((0) <= (_2_forall_2c518904a6a245949a19dd8c13ed41e3_101)) && (((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) < (_3.val_int)) && (true))) && ((((!(false))?((0) <= ((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))))):(false)) && (((!(false))?(((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))):(false)) && (true))) && (((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_2.val_ref))) && (true)))) ==> ((!(false))?((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, (_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))))) == (m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_2.val_ref, _2_forall_2c518904a6a245949a19dd8c13ed41e3_101))):(false))) && ((forall _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101: Int  :: (((0) <= (_2_forall_13192bc222e64cbcab6eed54bb1b9c53_101)) && (((_2_forall_13192bc222e64cbcab6eed54bb1b9c53_101) < (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) && (true))) ==> ((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101)) == (old[pre](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101))))) && (true))))
+    Goto(cfg:16)
+  label loop2_group3_bb9 // 16
+    // ========== loop2_group3_bb9 ==========
+    __t7 := copy true
+    // [mir] _11 = const ()
+    // [mir] goto -> bb10
+    Goto(cfg:17)
+  label loop2_group3_bb10 // 17
+    // ========== loop2_group3_bb10 ==========
+    __t8 := copy true
+    // [mir] StorageDead(_12)
+    // [mir] StorageDead(_11)
+    // [mir] StorageLive(_16)
+    // [mir] StorageLive(_17)
+    // [mir] _17 = const false
+    _17 := builtin$havoc_ref()
+    inhale(Stmt) acc(_17.val_bool, write)
+    _17.val_bool := copy false
+    // [mir] switchInt(move _17) -> [false: bb12, otherwise: bb11]
+    __t21 := copy _17.val_bool
+    // Ignore default target bb11, as it is only used by Prusti to type-check a loop invariant.
+    Goto(cfg:18)
+  label loop2_group3_bb12 // 18
+    // ========== loop2_group3_bb12 ==========
+    __t9 := copy true
+    // [mir] _16 = const ()
+    // [mir] goto -> bb13
+    Goto(cfg:19)
+  label loop2_group3_bb13 // 19
+    // ========== loop2_group3_bb13 ==========
+    __t10 := copy true
+    // [mir] StorageDead(_17)
+    // [mir] StorageDead(_16)
+    // [mir] StorageLive(_21)
+    // [mir] StorageLive(_22)
+    // [mir] _22 = const false
+    _22 := builtin$havoc_ref()
+    inhale(Stmt) acc(_22.val_bool, write)
+    _22.val_bool := copy false
+    // [mir] switchInt(move _22) -> [false: bb15, otherwise: bb14]
+    __t22 := copy _22.val_bool
+    // Ignore default target bb14, as it is only used by Prusti to type-check a loop invariant.
+    Goto(cfg:20)
+  label loop2_group3_bb15 // 20
+    // ========== loop2_group3_bb15 ==========
+    __t11 := copy true
+    // [mir] _21 = const ()
+    // [mir] goto -> bb16
+    Goto(cfg:21)
+  label loop2_group3_bb16 // 21
+    // ========== loop2_group3_bb16 ==========
+    __t12 := copy true
+    // [mir] StorageDead(_22)
+    // [mir] StorageDead(_21)
+    // [mir] StorageLive(_27)
+    // [mir] StorageLive(_28)
+    // [mir] _28 = const false
+    _28 := builtin$havoc_ref()
+    inhale(Stmt) acc(_28.val_bool, write)
+    _28.val_bool := copy false
+    // [mir] switchInt(move _28) -> [false: bb18, otherwise: bb17]
+    __t23 := copy _28.val_bool
+    // Ignore default target bb17, as it is only used by Prusti to type-check a loop invariant.
+    Goto(cfg:22)
+  label loop2_group3_bb18 // 22
+    // ========== loop2_group3_bb18 ==========
+    __t13 := copy true
+    // [mir] _27 = const ()
+    // [mir] goto -> bb19
+    Goto(cfg:23)
+  label loop2_group3_bb19 // 23
+    // ========== loop2_group3_bb19 ==========
+    __t14 := copy true
+    // [mir] StorageDead(_28)
+    // [mir] StorageDead(_27)
+    // [mir] StorageLive(_31)
+    // [mir] StorageLive(_32)
+    // [mir] _32 = &'_ mut (*_1)
+    _32 := builtin$havoc_ref()
+    inhale(Stmt) acc(_32.val_ref, write)
+    _32.val_ref := mut borrow _1.val_ref // L9
+    label l9
+    // [mir] StorageLive(_33)
+    // [mir] StorageLive(_34)
+    // [mir] _34 = &'_ (*_2)
+    _34 := builtin$havoc_ref()
+    inhale(Stmt) acc(_34.val_ref, write)
+    _34.val_ref := borrow _2.val_ref // L17
+    label l10
+    // [mir] StorageLive(_35)
+    // [mir] _35 = _3
+    _35 := builtin$havoc_ref()
+    inhale(Stmt) acc(_35.val_int, write)
+    _35.val_int := copy _3.val_int
+    label l11
+    // [mir] _33 = PrustiVec::lookup(move _34, move _35) -> [return: bb20, unwind: bb23]
+    label l12
+    _33 := builtin$havoc_ref()
+    inhale(Stmt) acc(u8(_33), write)
+    inhale(Stmt) (_33.val_int) == (m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_34.val_ref, _35.val_int))
+    transfer perm _34.val_ref --> old[l12](_34.val_ref) // unchecked: false
+    Goto(cfg:24)
+  label l13 // 24
+    // ========== l13 ==========
+    // MIR edge bb19 --> bb20
+    // Expire borrows
+    expire_borrows ReborrowingDAG(L18,L17,)
+
+    Goto(cfg:25)
+  label loop2_group3_bb20 // 25
+    // ========== loop2_group3_bb20 ==========
+    __t15 := copy true
+    // [mir] StorageDead(_35)
+    // [mir] StorageDead(_34)
+    // [mir] _31 = PrustiVec::push(move _32, move _33) -> [return: bb21, unwind: bb23]
+    label l14
+    assert(Stmt) true
+    assert(Stmt) (ref$m_PrustiVec$_beg_$_end_$inv<Ref(ref$m_PrustiVec$_beg_$_end_),Bool>(_32)) && ((u8$inv<Ref(u8),Bool>(_33)) && (true))
+    exhale (acc(_32.val_ref, write)) && ((acc(m_PrustiVec$_beg_$_end_(_32.val_ref), write)) && ((acc(u8(_33), write)) && (true)))
+    _31 := builtin$havoc_ref()
+    inhale(Stmt) (acc(m_PrustiVec$_beg_$_end_(old[l14](_32.val_ref)), write)) && (true)
+    inhale(Stmt) acc(tuple0$(_31), write)
+    inhale(Stmt) (m_PrustiVec$_beg_$_end_$inv<Ref(m_PrustiVec$_beg_$_end_),Bool>(old[l14](_32.val_ref))) && ((tuple0$$inv<Ref(tuple0$),Bool>(_31)) && (true))
+    inhale(Expr) ((!(false))?((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(old[l14](_32.val_ref))) == ((old[l14](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_32.val_ref))) + (1))):(false)) && (((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(old[l14](_32.val_ref))) >= (1)) && (((!(false))?((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(old[l14](_32.val_ref), (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(old[l14](_32.val_ref))) - (1))) == (old[l14](_33.val_int))):(false)) && ((forall _2_forall_7d7a2d47ff234b25b88df0ba85612c68_101: Int  :: (((0) <= (_2_forall_7d7a2d47ff234b25b88df0ba85612c68_101)) && (((_2_forall_7d7a2d47ff234b25b88df0ba85612c68_101) < (old[l14](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_32.val_ref)))) && (true))) ==> ((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(old[l14](_32.val_ref), _2_forall_7d7a2d47ff234b25b88df0ba85612c68_101)) == (old[l14](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_32.val_ref, _2_forall_7d7a2d47ff234b25b88df0ba85612c68_101))))) && (true))))
+    exhale true
+    label l15
+    Goto(cfg:26)
+  label l16 // 26
+    // ========== l16 ==========
+    // MIR edge bb20 --> bb21
+    // Expire borrows
+    expire_borrows ReborrowingDAG(L14,L9,)
+
+    Goto(cfg:27)
+  label loop2_group3_bb21 // 27
+    // ========== loop2_group3_bb21 ==========
+    __t16 := copy true
+    // [mir] StorageDead(_33)
+    // [mir] StorageDead(_32)
+    // [mir] StorageDead(_31)
+    // [mir] _36 = CheckedAdd(_3, const 1_usize)
+    _36 := builtin$havoc_ref()
+    inhale(Stmt) acc(_36.tuple_0, write)
+    inhale(Stmt) acc(_36.tuple_0.val_int, write)
+    inhale(Stmt) acc(_36.tuple_1, write)
+    inhale(Stmt) acc(_36.tuple_1.val_bool, write)
+    _36.tuple_0.val_int := copy (_3.val_int) + (1)
+    _36.tuple_1.val_bool := copy false
+    // [mir] assert(!move (_36.1: bool), "attempt to compute `{} + {}`, which would overflow", _3, const 1_usize) -> [success: bb22, unwind: bb23]
+    __t24 := copy _36.tuple_1.val_bool
+    // Rust assertion: attempt to add with overflow
+    assert(Stmt) !(__t24)
+    Goto(cfg:28)
+  label loop2_group3_bb22 // 28
+    // ========== loop2_group3_bb22 ==========
+    __t17 := copy true
+    // [mir] _3 = move (_36.0: usize)
+    _3 := move _36.tuple_0
+    label l17
+    // [mir] _6 = const ()
+    // [mir] StorageDead(_7)
+    // [mir] goto -> bb2
+    Goto(cfg:29)
+  label loop2_group4_bb2 // 29
+    // ========== loop2_group4_bb2 ==========
+    // This is a loop head
+    __t2 := copy true
+    // [mir] falseUnwind -> [real: bb3, cleanup: bb23]
+    Goto(cfg:30)
+  label loop2_group4_bb3 // 30
+    // ========== loop2_group4_bb3 ==========
+    __t3 := copy true
+    // [mir] StorageLive(_7)
+    // [mir] StorageLive(_8)
+    // [mir] _8 = _3
+    _8 := builtin$havoc_ref()
+    inhale(Stmt) acc(_8.val_int, write)
+    _8.val_int := copy _3.val_int
+    label l18
+    // [mir] StorageLive(_9)
+    // [mir] StorageLive(_10)
+    // [mir] _10 = &'_ (*_2)
+    _10 := builtin$havoc_ref()
+    inhale(Stmt) acc(_10.val_ref, write)
+    _10.val_ref := borrow _2.val_ref // L19
+    label l19
+    // [mir] _9 = PrustiVec::len(move _10) -> [return: bb4, unwind: bb23]
+    label l20
+    _9 := builtin$havoc_ref()
+    inhale(Stmt) acc(usize(_9), write)
+    inhale(Stmt) (_9.val_int) == (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_10.val_ref))
+    transfer perm _10.val_ref --> old[l20](_10.val_ref) // unchecked: false
+    Goto(cfg:31)
+  label l21 // 31
+    // ========== l21 ==========
+    // MIR edge bb3 --> bb4
+    // Expire borrows
+    expire_borrows ReborrowingDAG(L15,L19,)
+
+    Goto(cfg:32)
+  label loop2_group4_bb4 // 32
+    // ========== loop2_group4_bb4 ==========
+    __t4 := copy true
+    // [mir] StorageDead(_10)
+    // [mir] _7 = Lt(move _8, move _9)
+    _7 := builtin$havoc_ref()
+    inhale(Stmt) acc(_7.val_bool, write)
+    _7.val_bool := copy (_8.val_int) < (_9.val_int)
+    // [mir] StorageDead(_9)
+    // [mir] StorageDead(_8)
+    // [mir] FakeRead(ForMatchedPlace, _7)
+    // [mir] switchInt(_7) -> [false: bb6, otherwise: bb5]
+    __t25 := copy _7.val_bool
+    GotoSwitch([(Local(__t25: Bool, Position { line: 0, column: 0, id: 0 }), cfg:34)], cfg:33)
+  label l22 // 33
+    // ========== l22 ==========
+    // MIR edge bb4 --> bb6
+    Goto(cfg:38)
+  label l23 // 34
+    // ========== l23 ==========
+    // MIR edge bb4 --> bb5
+    Goto(cfg:35)
+  label loop2_group5_bb5 // 35
+    // ========== loop2_group5_bb5 ==========
+    __t5 := copy true
+    // [mir] falseEdge -> [real: bb7, imaginary: bb6]
+    Goto(cfg:36)
+  label loop2_group5_bb7 // 36
+    // ========== loop2_group5_bb7 ==========
+    __t6 := copy true
+    // [mir] StorageLive(_11)
+    // [mir] StorageLive(_12)
+    // [mir] _12 = const false
+    _12 := builtin$havoc_ref()
+    inhale(Stmt) acc(_12.val_bool, write)
+    _12.val_bool := copy false
+    // [mir] switchInt(move _12) -> [false: bb9, otherwise: bb8]
+    __t26 := copy _12.val_bool
+    // Ignore default target bb8, as it is only used by Prusti to type-check a loop invariant.
+    Goto(cfg:37)
+  label loop2_end_body // 37
+    // ========== loop2_end_body ==========
+    // Assert and exhale the loop body invariant (loop head: bb2)
+    obtain acc(bool(_7), write)
+    obtain acc(usize(_3), write)
+    obtain acc(_1.val_ref, read)
+    obtain acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)
+    obtain acc(_2.val_ref, read)
+    assert(Expr) (((0) <= (_3.val_int)) && (((_3.val_int) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_2.val_ref))) && (true))) && (((!(false))?((m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)) == ((old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))) + (_3.val_int))):(false)) && ((forall _2_forall_2c518904a6a245949a19dd8c13ed41e3_101: Int  :: ((((0) <= (_2_forall_2c518904a6a245949a19dd8c13ed41e3_101)) && (((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) < (_3.val_int)) && (true))) && ((((!(false))?((0) <= ((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))))):(false)) && (((!(false))?(((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))):(false)) && (true))) && (((_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) < (m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_2.val_ref))) && (true)))) ==> ((!(false))?((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, (_2_forall_2c518904a6a245949a19dd8c13ed41e3_101) + (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref))))) == (m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_2.val_ref, _2_forall_2c518904a6a245949a19dd8c13ed41e3_101))):(false))) && ((forall _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101: Int  :: (((0) <= (_2_forall_13192bc222e64cbcab6eed54bb1b9c53_101)) && (((_2_forall_13192bc222e64cbcab6eed54bb1b9c53_101) < (old[pre](m_len<Ref(m_PrustiVec$_beg_$_end_),Int>(_1.val_ref)))) && (true))) ==> ((m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101)) == (old[pre](m_lookup<Ref(m_PrustiVec$_beg_$_end_), Int,Int>(_1.val_ref, _2_forall_13192bc222e64cbcab6eed54bb1b9c53_101))))) && (true))))
+    assert(Expr) ((_preserve$0) == (_1.val_ref)) && (((_preserve$1) == (_2.val_ref)) && (true))
+    exhale (acc(bool(_7), write)) && ((acc(usize(_3), write)) && ((acc(_1.val_ref, read)) && ((acc(m_PrustiVec$_beg_$_end_(_1.val_ref), write)) && ((acc(_2.val_ref, read)) && (true)))))
+    inhale(Stmt) false
+    Return
+  label bb6 // 38
+    // ========== bb6 ==========
+    __t18 := copy true
+    // [mir] _0 = const ()
+    // [mir] StorageDead(_7)
+    // [mir] StorageDead(_4)
+    // [mir] StorageDead(_3)
+    // [mir] return
+    Goto(cfg:1)
+  label end_of_method
+}
+
+

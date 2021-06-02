@@ -1,0 +1,202 @@
+// MIR for `max3` 0 renumber
+
+fn max3(_1: i32, _2: i32, _3: i32) -> i32 {
+    debug a => _1;                       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:16:9: 16:10
+    debug b => _2;                       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:16:17: 16:18
+    debug c => _3;                       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:16:25: 16:26
+    let mut _0: i32;                     // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:16:36: 16:39
+    let mut _4: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+    let mut _5: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:13
+    let mut _6: i32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:9
+    let mut _7: i32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:12: 17:13
+    let mut _8: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:17: 17:22
+    let mut _9: i32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:17: 17:18
+    let mut _10: i32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:21: 17:22
+    let mut _11: bool;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:12: 20:17
+    let mut _12: i32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:12: 20:13
+    let mut _13: i32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:16: 20:17
+    let _14: ();                         // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:9: 47:10
+    let mut _15: (&'_#12r i32, &'_#13r i32); // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:15: 37:32
+    let mut _16: &'_#14r i32;            // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:16: 37:22
+    let _17: i32;                        // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:24: 21:33
+    let mut _18: i32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:28: 21:29
+    let mut _19: i32;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:31: 21:32
+    let mut _20: &'_#15r i32;            // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:24: 37:31
+    let _21: &'_#16r i32;                // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:14: 38:22
+    let _22: &'_#17r i32;                // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:24: 38:33
+    let mut _23: bool;                   // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:20: 39:46
+    let mut _24: bool;                   // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:21: 39:46
+    let mut _25: i32;                    // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:22: 39:31
+    let mut _26: i32;                    // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:35: 39:45
+    let mut _27: !;                      // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:47: 45:18
+    let _29: !;                          // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:21: 44:114
+    let mut _30: core::panicking::AssertKind; // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:54: 44:58
+    let mut _31: &'_#18r i32;            // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:60: 44:70
+    let _32: &'_#19r i32;                // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:60: 44:70
+    let mut _33: &'_#20r i32;            // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:72: 44:83
+    let _34: &'_#21r i32;                // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:72: 44:83
+    let mut _35: std::option::Option<std::fmt::Arguments<'_#22r>>; // in scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:85: 44:113
+    scope 1 {
+        debug left_val => _21;           // in scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:14: 38:22
+        debug right_val => _22;          // in scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:24: 38:33
+        let _28: core::panicking::AssertKind; // in scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:40:25: 40:29
+        scope 2 {
+            debug kind => _28;           // in scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:40:25: 40:29
+        }
+    }
+
+    bb0: {
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:13
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:9
+        _6 = _1;                         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:9
+        StorageLive(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:12: 17:13
+        _7 = _2;                         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:12: 17:13
+        _5 = Gt(move _6, move _7);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:13
+        StorageDead(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:12: 17:13
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:12: 17:13
+        switchInt(move _5) -> [false: bb2, otherwise: bb3]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+    }
+
+    bb1: {
+        _4 = const true;                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+        goto -> bb4;                     // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+    }
+
+    bb2: {
+        _4 = const false;                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+        goto -> bb4;                     // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+    }
+
+    bb3: {
+        StorageLive(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:17: 17:22
+        StorageLive(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:17: 17:18
+        _9 = _1;                         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:17: 17:18
+        StorageLive(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:21: 17:22
+        _10 = _3;                        // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:21: 17:22
+        _8 = Gt(move _9, move _10);      // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:17: 17:22
+        StorageDead(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:21: 17:22
+        StorageDead(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:21: 17:22
+        switchInt(move _8) -> [false: bb2, otherwise: bb1]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:8: 17:22
+    }
+
+    bb4: {
+        StorageDead(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:21: 17:22
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:21: 17:22
+        switchInt(move _4) -> [false: bb6, otherwise: bb5]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:5: 26:6
+    }
+
+    bb5: {
+        _0 = _1;                         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:18:9: 18:10
+        goto -> bb13;                    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:5: 26:6
+    }
+
+    bb6: {
+        StorageLive(_11);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:12: 20:17
+        StorageLive(_12);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:12: 20:13
+        _12 = _2;                        // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:12: 20:13
+        StorageLive(_13);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:16: 20:17
+        _13 = _3;                        // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:16: 20:17
+        _11 = Gt(move _12, move _13);    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:12: 20:17
+        StorageDead(_13);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:16: 20:17
+        StorageDead(_12);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:16: 20:17
+        switchInt(move _11) -> [false: bb8, otherwise: bb7]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:9: 25:10
+    }
+
+    bb7: {
+        StorageLive(_14);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:36:41: 48:6
+        StorageLive(_15);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:15: 37:32
+        StorageLive(_16);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:16: 37:22
+        StorageLive(_17);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:24: 21:33
+        StorageLive(_18);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:28: 21:29
+        _18 = _2;                        // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:28: 21:29
+        StorageLive(_19);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:31: 21:32
+        _19 = _3;                        // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:31: 21:32
+        _17 = max(move _18, move _19) -> [return: bb9, unwind: bb14]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:24: 21:33
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:24: 21:27
+                                         // + literal: Const { ty: fn(i32, i32) -> i32 {max}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb8: {
+        _0 = _3;                         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:24:13: 24:14
+        goto -> bb12;                    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:9: 25:10
+    }
+
+    bb9: {
+        StorageDead(_19);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:32: 21:33
+        StorageDead(_18);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:21:32: 21:33
+        _16 = &'_#3r _17;                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:16: 37:22
+        StorageLive(_20);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:24: 37:31
+        _20 = &'_#4r _2;                 // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:24: 37:31
+        _15 = (move _16, move _20);      // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:15: 37:32
+        StorageDead(_20);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:31: 37:32
+        StorageDead(_16);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:31: 37:32
+        FakeRead(ForMatchedPlace, _15);  // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:37:15: 37:32
+        StorageLive(_21);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:14: 38:22
+        _21 = (_15.0: &'_#5r i32);       // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:14: 38:22
+        StorageLive(_22);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:24: 38:33
+        _22 = (_15.1: &'_#6r i32);       // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:38:24: 38:33
+        StorageLive(_23);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:20: 39:46
+        StorageLive(_24);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:21: 39:46
+        StorageLive(_25);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:22: 39:31
+        _25 = (*_21);                    // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:22: 39:31
+        StorageLive(_26);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:35: 39:45
+        _26 = (*_22);                    // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:35: 39:45
+        _24 = Eq(move _25, move _26);    // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:21: 39:46
+        StorageDead(_26);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:45: 39:46
+        StorageDead(_25);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:45: 39:46
+        _23 = Not(move _24);             // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:20: 39:46
+        StorageDead(_24);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:45: 39:46
+        switchInt(move _23) -> [false: bb11, otherwise: bb10]; // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:39:17: 45:18
+    }
+
+    bb10: {
+        StorageLive(_28);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:40:25: 40:29
+        _28 = core::panicking::AssertKind::Eq; // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:40:32: 40:65
+        FakeRead(ForLet, _28);           // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:40:25: 40:29
+        StorageLive(_29);                // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:21: 44:114
+        StorageLive(_30);                // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:54: 44:58
+        _30 = move _28;                  // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:54: 44:58
+        StorageLive(_31);                // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:60: 44:70
+        StorageLive(_32);                // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:60: 44:70
+        _32 = &'_#7r (*_21);             // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:60: 44:70
+        _31 = &'_#8r (*_32);             // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:60: 44:70
+        StorageLive(_33);                // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:72: 44:83
+        StorageLive(_34);                // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:72: 44:83
+        _34 = &'_#9r (*_22);             // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:72: 44:83
+        _33 = &'_#10r (*_34);            // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:72: 44:83
+        StorageLive(_35);                // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:85: 44:113
+        _35 = std::option::Option::<std::fmt::Arguments<'_#11r>>::None; // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:85: 44:113
+        core::panicking::assert_failed::<i32, i32>(move _30, move _31, move _33, move _35) -> bb14; // scope 2 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:21: 44:114
+                                         // mir::Constant
+                                         // + span: /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:44:21: 44:53
+                                         // + literal: Const { ty: for<'r, 's, 't0> fn(core::panicking::AssertKind, &'r i32, &'s i32, std::option::Option<std::fmt::Arguments<'t0>>) -> ! {core::panicking::assert_failed::<i32, i32>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb11: {
+        _14 = const ();                  // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:45:18: 45:18
+        StorageDead(_23);                // scope 1 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:45:17: 45:18
+        StorageDead(_22);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:46:13: 46:14
+        StorageDead(_21);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:46:13: 46:14
+        StorageDead(_17);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:48:5: 48:6
+        StorageDead(_15);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:48:5: 48:6
+        StorageDead(_14);                // scope 0 at /rustc/fe1bf8e05c39bdcc73fc09e246b7209444e389bc/library/core/src/macros/mod.rs:48:5: 48:6
+        _0 = _2;                         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:22:13: 22:14
+        goto -> bb12;                    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:20:9: 25:10
+    }
+
+    bb12: {
+        StorageDead(_11);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:25:9: 25:10
+        goto -> bb13;                    // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:17:5: 26:6
+    }
+
+    bb13: {
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:26:5: 26:6
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:27:2: 27:2
+    }
+
+    bb14 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:16:1: 27:2
+    }
+}

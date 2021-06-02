@@ -1,0 +1,34 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:145:1: 404:2>::prusti_post_item_shl_092dc6d840ae4af2bd73138814ad6d57::{closure#0}::{closure#4}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:145:1: 404:2>::prusti_post_item_shl_092dc6d840ae4af2bd73138814ad6d57::{closure#0}::{closure#4}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:61]) -> bool {
+    debug i => (*((*_1).0: &'_#11r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:224:17: 224:18
+    debug amt => (*((*_1).1: &'_#12r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:236:19: 236:22
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:61
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:56
+    let mut _3: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:48: 226:49
+    let mut _4: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:52: 226:55
+    let mut _5: (usize, bool);           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:56
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:56
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:48: 226:49
+        _3 = (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:48: 226:49
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:52: 226:55
+        _4 = (*((*_1).1: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:52: 226:55
+        _5 = CheckedSub(_3, _4);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:56
+        assert(!move (_5.1: bool), "attempt to compute `{} - {}`, which would overflow", move _3, move _4) -> [success: bb1, unwind: bb2]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:56
+    }
+
+    bb1: {
+        _2 = move (_5.0: usize);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:56
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:55: 226:56
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:55: 226:56
+        _0 = Lt(move _2, const 32_usize); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:61
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:60: 226:61
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:61: 226:61
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:226:47: 226:61
+    }
+}

@@ -1,0 +1,63 @@
+// MIR for `prusti_post_item_flip_bytes_af3179bd17f443d1806a64466654c06e::{closure#0}::{closure#2}` 0 renumber
+
+fn prusti_post_item_flip_bytes_af3179bd17f443d1806a64466654c06e::{closure#0}::{closure#2}(_1: &'_#13r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:67]) -> bool {
+    debug result => (*((*_1).0: &'_#19r BoolArr32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:187:1: 220:2
+    debug i => (*((*_1).1: &'_#20r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:195:13: 195:14
+    debug a => (*((*_1).2: &'_#21r BoolArr32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:199:15: 199:16
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:67
+    let mut _2: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:47
+    let mut _3: &'_#17r BoolArr32;       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:37
+    let mut _4: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:45: 196:46
+    let mut _5: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:51: 196:67
+    let mut _6: &'_#18r BoolArr32;       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:51: 196:52
+    let mut _7: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:60: 196:66
+    let mut _8: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:65: 196:66
+    let mut _9: (usize, bool);           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:60: 196:66
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:47
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:37
+        _3 = &'_#7r (*((*_1).0: &'_#8r BoolArr32)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:37
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:45: 196:46
+        _4 = (*((*_1).1: &'_#9r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:45: 196:46
+        _2 = BoolArr32::lookup(move _3, move _4) -> [return: bb1, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:47
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:38: 196:44
+                                         // + literal: Const { ty: for<'r> fn(&'r BoolArr32, usize) -> bool {BoolArr32::lookup}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:46: 196:47
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:46: 196:47
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:51: 196:67
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:51: 196:52
+        _6 = &'_#10r (*((*_1).2: &'_#11r BoolArr32)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:51: 196:52
+        StorageLive(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:60: 196:66
+        StorageLive(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:65: 196:66
+        _8 = (*((*_1).1: &'_#12r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:65: 196:66
+        _9 = CheckedSub(const 31_usize, _8); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:60: 196:66
+        assert(!move (_9.1: bool), "attempt to compute `{} - {}`, which would overflow", const 31_usize, move _8) -> [success: bb2, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:60: 196:66
+    }
+
+    bb2: {
+        _7 = move (_9.0: usize);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:60: 196:66
+        StorageDead(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:65: 196:66
+        _5 = BoolArr32::lookup(move _6, move _7) -> [return: bb3, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:51: 196:67
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:53: 196:59
+                                         // + literal: Const { ty: for<'r> fn(&'r BoolArr32, usize) -> bool {BoolArr32::lookup}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        StorageDead(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:66: 196:67
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:66: 196:67
+        _0 = Eq(move _2, move _5);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:67
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:66: 196:67
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:66: 196:67
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:67: 196:67
+    }
+
+    bb4 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:196:31: 196:67
+    }
+}

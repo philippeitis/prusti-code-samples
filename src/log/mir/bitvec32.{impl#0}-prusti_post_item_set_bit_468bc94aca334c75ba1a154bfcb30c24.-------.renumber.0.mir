@@ -1,0 +1,33 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::prusti_post_item_set_bit_468bc94aca334c75ba1a154bfcb30c24` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::prusti_post_item_set_bit_468bc94aca334c75ba1a154bfcb30c24(_1: &'_#9r mut BitVec32, _2: usize, _3: bool, _4: ()) -> () {
+    debug self => _1;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:52:20: 52:29
+    debug index => _2;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:52:31: 52:36
+    debug val => _3;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:52:45: 52:48
+    debug result => _4;                  // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:52:5: 58:6
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:52:5: 52:5
+    let _5: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+    let mut _6: &'_#13r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+    let mut _7: &'_#14r &'_#15r mut BitVec32; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+
+    bb0: {
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+        _6 = &'_#4r _2;                  // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+        StorageLive(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+        _7 = &'_#5r _1;                  // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+        _5 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15] { index: move _6, self: move _7 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:5: 43:15
+                                         // closure
+                                         // + def_id: DefId(0:27 ~ bitvec32[8787]::{impl#0}::prusti_post_item_set_bit_468bc94aca334c75ba1a154bfcb30c24::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn((usize,)),
+                                         //     (&'_#6r usize, &'_#7r &'_#8r mut BitVec32),
+                                         // ]
+        StorageDead(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:14: 43:15
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:14: 43:15
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:43:14: 43:15
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:52:5: 58:6
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:58:6: 58:6
+    }
+}

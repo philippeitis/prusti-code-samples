@@ -1,0 +1,20 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::shl_v::{closure#1}::{closure#0}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:8:1: 350:2>::shl_v::{closure#1}::{closure#0}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:29: 131:37]) -> bool {
+    debug amt => (*((*_1).0: &'_#11r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:121:21: 121:24
+    debug i => (*((*_1).1: &'_#12r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:123:13: 123:18
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:29: 131:37
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:29: 131:32
+    let mut _3: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:36: 131:37
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:29: 131:32
+        _2 = (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:29: 131:32
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:36: 131:37
+        _3 = (*((*_1).1: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:36: 131:37
+        _0 = Le(move _2, move _3);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:29: 131:37
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:36: 131:37
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:36: 131:37
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bitvec32.rs:131:37: 131:37
+    }
+}

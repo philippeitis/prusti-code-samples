@@ -1,0 +1,15 @@
+// MIR for `prusti_pre_item_look_up_bit_4cb4e9d9600947bea08e9c3c2b8bbaf1::{closure#1}` 0 renumber
+
+fn prusti_pre_item_look_up_bit_4cb4e9d9600947bea08e9c3c2b8bbaf1::{closure#1}(_1: &'_#6r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:22: 115:28]) -> bool {
+    debug i => (*((*_1).0: &'_#8r u32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:117:24: 117:25
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:22: 115:28
+    let mut _2: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:22: 115:23
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:22: 115:23
+        _2 = (*((*_1).0: &'_#5r u32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:22: 115:23
+        _0 = Lt(move _2, const 32_u32);  // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:22: 115:28
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:27: 115:28
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:115:28: 115:28
+    }
+}

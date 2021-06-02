@@ -1,0 +1,69 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shr::{closure#1}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shr::{closure#1}(_1: &'_#24r [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:13: 297:75]) -> () {
+    debug i => (*((*_1).0: &'_#39r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:286:13: 286:18
+    debug amt => (*((*_1).1: &'_#40r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:284:19: 284:22
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:13: 297:13
+    let _2: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+    let mut _3: &'_#29r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+    let mut _4: &'_#30r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+    let _5: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+    let mut _6: &'_#33r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+    let mut _7: &'_#34r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+    let _8: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+    let mut _9: &'_#37r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+    let mut _10: &'_#38r usize;          // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+        _3 = &'_#6r (*((*_1).0: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+        _4 = &'_#8r (*((*_1).1: &'_#9r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+        _2 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37] { i: move _3, amt: move _4 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:29: 297:37
+                                         // closure
+                                         // + def_id: DefId(0:121 ~ bytevec[8787]::{impl#0}::shr::{closure#1}::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#10r usize, &'_#11r usize),
+                                         // ]
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:36: 297:37
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:36: 297:37
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:36: 297:37
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+        _6 = &'_#12r (*((*_1).0: &'_#13r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+        StorageLive(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+        _7 = &'_#14r (*((*_1).1: &'_#15r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+        _5 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55] { i: move _6, amt: move _7 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:41: 297:55
+                                         // closure
+                                         // + def_id: DefId(0:122 ~ bytevec[8787]::{impl#0}::shr::{closure#1}::{closure#1})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#16r usize, &'_#17r usize),
+                                         // ]
+        StorageDead(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:54: 297:55
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:54: 297:55
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:54: 297:55
+        StorageLive(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+        StorageLive(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+        _9 = &'_#18r (*((*_1).0: &'_#19r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+        StorageLive(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+        _10 = &'_#20r (*((*_1).1: &'_#21r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+        _8 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73] { i: move _9, amt: move _10 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:59: 297:73
+                                         // closure
+                                         // + def_id: DefId(0:123 ~ bytevec[8787]::{impl#0}::shr::{closure#1}::{closure#2})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#22r usize, &'_#23r usize),
+                                         // ]
+        StorageDead(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:72: 297:73
+        StorageDead(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:72: 297:73
+        StorageDead(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:72: 297:73
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:13: 297:75
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:297:75: 297:75
+    }
+}

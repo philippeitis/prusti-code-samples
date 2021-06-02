@@ -1,0 +1,39 @@
+// MIR for `max_range::{closure#2}::{closure#0}` 0 renumber
+
+fn max_range::{closure#2}::{closure#0}(_1: &'_#10r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:29: 83:43]) -> bool {
+    debug i => (*((*_1).0: &'_#14r u32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:65:13: 65:18
+    debug a => (*((*_1).1: &'_#15r u32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:61:14: 61:15
+    debug b => (*((*_1).2: &'_#16r u32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:61:22: 61:23
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:29: 83:43
+    let mut _2: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:29: 83:30
+    let mut _3: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:34: 83:43
+    let mut _4: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:38: 83:39
+    let mut _5: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:41: 83:42
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:29: 83:30
+        _2 = (*((*_1).0: &'_#7r u32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:29: 83:30
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:34: 83:43
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:38: 83:39
+        _4 = (*((*_1).1: &'_#8r u32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:38: 83:39
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:41: 83:42
+        _5 = (*((*_1).2: &'_#9r u32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:41: 83:42
+        _3 = max(move _4, move _5) -> [return: bb1, unwind: bb2]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:34: 83:43
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:34: 83:37
+                                         // + literal: Const { ty: fn(u32, u32) -> u32 {max}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:42: 83:43
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:42: 83:43
+        _0 = Le(move _2, move _3);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:29: 83:43
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:42: 83:43
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:42: 83:43
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:43: 83:43
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:83:29: 83:43
+    }
+}

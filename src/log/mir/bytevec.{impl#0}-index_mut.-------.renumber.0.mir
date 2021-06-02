@@ -1,0 +1,62 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::index_mut` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::index_mut(_1: &'_#11r mut BoolArr32, _2: usize) -> &'_#10r mut bool {
+    debug self => _1;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:183:22: 183:31
+    debug index => _2;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:183:33: 183:38
+    let mut _0: &'_#10r mut bool;        // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:183:50: 183:59
+    let mut _3: &'_#12r mut bool;        // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:39
+    let mut _4: &'_#13r mut bool;        // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:39
+    let mut _5: std::option::Option<&'_#14r mut bool>; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:30
+    let mut _6: &'_#15r mut [bool];      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:15
+    let mut _7: &'_#16r mut [bool];      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:30
+    let mut _8: &'_#17r mut std::vec::Vec<bool>; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:15
+    let mut _9: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:24: 184:29
+
+    bb0: {
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:39
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:39
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:30
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:15
+        StorageLive(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:30
+        StorageLive(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:15
+        _8 = &'_#4r mut ((*_1).0: std::vec::Vec<bool>); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:15
+        _7 = <std::vec::Vec<bool> as std::ops::DerefMut>::deref_mut(move _8) -> [return: bb1, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:30
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:30
+                                         // + literal: Const { ty: for<'r> fn(&'r mut std::vec::Vec<bool>) -> &'r mut <std::vec::Vec<bool> as std::ops::Deref>::Target {<std::vec::Vec<bool> as std::ops::DerefMut>::deref_mut}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        _6 = &'_#5r mut (*_7);           // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:15
+        StorageDead(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:14: 184:15
+        StorageLive(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:24: 184:29
+        _9 = _2;                         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:24: 184:29
+        _5 = core::slice::<impl [bool]>::get_mut::<usize>(move _6, move _9) -> [return: bb2, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:30
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:16: 184:23
+                                         // + literal: Const { ty: for<'r> fn(&'r mut [bool], usize) -> std::option::Option<&'r mut <usize as std::slice::SliceIndex<[bool]>>::Output> {core::slice::<impl [bool]>::get_mut::<usize>}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        StorageDead(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:29: 184:30
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:29: 184:30
+        _4 = std::option::Option::<&'_#6r mut bool>::unwrap(move _5) -> [return: bb3, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:39
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:31: 184:37
+                                         // + literal: Const { ty: fn(std::option::Option<&'_#6r mut bool>) -> &'_#6r mut bool {std::option::Option::<&'_#6r mut bool>::unwrap}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        _3 = &'_#7r mut (*_4);           // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:39
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:38: 184:39
+        _0 = &'_#8r mut (*_3);           // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:184:9: 184:39
+        StorageDead(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:185:5: 185:6
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:185:5: 185:6
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:185:5: 185:6
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:185:6: 185:6
+    }
+
+    bb4 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:183:5: 185:6
+    }
+}

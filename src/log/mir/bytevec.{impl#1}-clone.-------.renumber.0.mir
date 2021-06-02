@@ -1,0 +1,17 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:97:27: 97:32>::clone` 0 renumber
+
+| User Type Annotations
+| 0: Canonical { max_universe: U0, variables: [], value: Ty(std::clone::AssertParamIsClone<u32>) } at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:99:10: 99:13
+| 1: Canonical { max_universe: U0, variables: [], value: Ty(std::clone::AssertParamIsClone<u32>) } at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:99:10: 99:13
+|
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:97:27: 97:32>::clone(_1: &'_#4r U32Opt) -> U32Opt {
+    debug self => _1;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:97:27: 97:32
+    let mut _0: U32Opt;                  // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:97:27: 97:32
+    scope 1 {
+    }
+
+    bb0: {
+        _0 = (*_1);                      // scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:97:27: 97:32
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:97:32: 97:32
+    }
+}

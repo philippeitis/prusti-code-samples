@@ -1,0 +1,81 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 713:2>::prusti_post_item_shr_v_6c17bd6d612f489f9785719045800426::{closure#0}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 713:2>::prusti_post_item_shr_v_6c17bd6d612f489f9785719045800426::{closure#0}(_1: &'_#20r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:599:5: 599:26], _2: usize) -> () {
+    debug i => _2;                       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:608:17: 608:18
+    debug amt => (*((*_1).0: &'_#35r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:615:21: 615:24
+    debug result => (*((*_1).1: &'_#36r BitVec32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:612:5: 648:6
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:599:5: 599:5
+    let _3: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+    let mut _4: &'_#24r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+    let _5: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+    let mut _6: &'_#27r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+    let mut _7: &'_#28r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+    let _8: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46
+    let mut _9: &'_#30r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46
+    let _10: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+    let mut _11: &'_#33r BitVec32;       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+    let mut _12: &'_#34r usize;          // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+
+    bb0: {
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+        _4 = &'_#6r _2;                  // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+        _3 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20] { i: move _4 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:14: 609:20
+                                         // closure
+                                         // + def_id: DefId(0:285 ~ main[8787]::{impl#1}::prusti_post_item_shr_v_6c17bd6d612f489f9785719045800426::{closure#0}::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#7r usize,),
+                                         // ]
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:19: 609:20
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:19: 609:20
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+        _6 = &'_#8r _2;                  // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+        StorageLive(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+        _7 = &'_#9r (*((*_1).0: &'_#10r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+        _5 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36] { i: move _6, amt: move _7 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:24: 609:36
+                                         // closure
+                                         // + def_id: DefId(0:286 ~ main[8787]::{impl#1}::prusti_post_item_shr_v_6c17bd6d612f489f9785719045800426::{closure#0}::{closure#1})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#11r usize, &'_#12r usize),
+                                         // ]
+        StorageDead(_7);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:35: 609:36
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:35: 609:36
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:35: 609:36
+        StorageLive(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46
+        StorageLive(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46
+        _9 = &'_#13r _2;                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46
+        _8 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46] { i: move _9 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:40: 609:46
+                                         // closure
+                                         // + def_id: DefId(0:287 ~ main[8787]::{impl#1}::prusti_post_item_shr_v_6c17bd6d612f489f9785719045800426::{closure#0}::{closure#2})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#14r usize,),
+                                         // ]
+        StorageDead(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:45: 609:46
+        StorageDead(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:45: 609:46
+        StorageLive(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+        StorageLive(_11);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+        _11 = &'_#15r (*((*_1).1: &'_#16r BitVec32)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+        StorageLive(_12);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+        _12 = &'_#17r _2;                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+        _10 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68] { result: move _11, i: move _12 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:51: 609:68
+                                         // closure
+                                         // + def_id: DefId(0:288 ~ main[8787]::{impl#1}::prusti_post_item_shr_v_6c17bd6d612f489f9785719045800426::{closure#0}::{closure#3})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#18r BitVec32, &'_#19r usize),
+                                         // ]
+        StorageDead(_12);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:67: 609:68
+        StorageDead(_11);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:67: 609:68
+        StorageDead(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:609:67: 609:68
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:599:5: 599:26
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:599:26: 599:26
+    }
+}

@@ -1,0 +1,34 @@
+// MIR for `shl::{closure#1}::{closure#0}::{closure#4}` 0 renumber
+
+fn shl::{closure#1}::{closure#0}::{closure#4}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:73]) -> bool {
+    debug j => (*((*_1).0: &'_#11r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:249:21: 249:22
+    debug amt => (*((*_1).1: &'_#12r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:237:22: 237:25
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:73
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:68
+    let mut _3: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:60: 250:61
+    let mut _4: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:64: 250:67
+    let mut _5: (usize, bool);           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:68
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:68
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:60: 250:61
+        _3 = (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:60: 250:61
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:64: 250:67
+        _4 = (*((*_1).1: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:64: 250:67
+        _5 = CheckedSub(_3, _4);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:68
+        assert(!move (_5.1: bool), "attempt to compute `{} - {}`, which would overflow", move _3, move _4) -> [success: bb1, unwind: bb2]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:68
+    }
+
+    bb1: {
+        _2 = move (_5.0: usize);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:68
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:67: 250:68
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:67: 250:68
+        _0 = Ge(move _2, const 0_usize); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:73
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:72: 250:73
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:73: 250:73
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:250:59: 250:73
+    }
+}

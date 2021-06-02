@@ -1,0 +1,26 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 784:2>::prusti_post_item_zero_79725d3d0f7a4909b26eb6c897546cb0` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 784:2>::prusti_post_item_zero_79725d3d0f7a4909b26eb6c897546cb0(_1: BitVec32) -> () {
+    debug result => _1;                  // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:443:5: 453:6
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:443:5: 443:5
+    let _2: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15
+    let mut _3: &'_#6r BitVec32;         // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15
+        _3 = &'_#3r _1;                  // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15
+        _2 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15] { result: move _3 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:5: 445:15
+                                         // closure
+                                         // + def_id: DefId(0:184 ~ main[8787]::{impl#1}::prusti_post_item_zero_79725d3d0f7a4909b26eb6c897546cb0::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn((usize,)),
+                                         //     (&'_#4r BitVec32,),
+                                         // ]
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:14: 445:15
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:445:14: 445:15
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:443:5: 453:6
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:453:6: 453:6
+    }
+}

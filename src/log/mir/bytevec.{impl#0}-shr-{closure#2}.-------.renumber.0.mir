@@ -1,0 +1,31 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shr::{closure#2}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shr::{closure#2}(_1: &'_#12r [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15]) -> () {
+    debug amt => (*((*_1).0: &'_#19r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:284:19: 284:22
+    debug out => (*((*_1).1: &'_#20r BoolArr32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:285:13: 285:20
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 298:13
+    let _2: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+    let mut _3: &'_#17r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+    let mut _4: &'_#18r BoolArr32;       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+        _3 = &'_#6r (*((*_1).0: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+        _4 = &'_#8r (*((*_1).1: &'_#9r BoolArr32)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+        _2 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15] { amt: move _3, out: move _4 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+                                         // closure
+                                         // + def_id: DefId(0:125 ~ bytevec[8787]::{impl#0}::shr::{closure#2}::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn((usize,)),
+                                         //     (&'_#10r usize, &'_#11r BoolArr32),
+                                         // ]
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:303:14: 303:15
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:303:14: 303:15
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:303:14: 303:15
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:298:13: 303:15
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:303:15: 303:15
+    }
+}

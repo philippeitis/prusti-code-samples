@@ -1,0 +1,68 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:790:1: 867:2>::append::{closure#1}::{closure#0}::{closure#5}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:790:1: 867:2>::append::{closure#1}::{closure#0}::{closure#5}(_1: &'_#19r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:68]) -> bool {
+    debug self => (*((*_1).0: &'_#28r &'_#29r mut PrustiVec)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:845:15: 845:24
+    debug j => (*((*_1).1: &'_#30r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:851:25: 851:26
+    debug old_len => (*((*_1).2: &'_#31r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:847:13: 847:20
+    debug other => (*((*_1).3: &'_#32r &'_#33r PrustiVec)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:845:26: 845:31
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:68
+    let mut _2: u8;                      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:49
+    let mut _3: &'_#26r PrustiVec;       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:29
+    let mut _4: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:48
+    let mut _5: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:38
+    let mut _6: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:41: 855:48
+    let mut _7: (usize, bool);           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:48
+    let mut _8: u8;                      // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:53: 855:68
+    let mut _9: &'_#27r PrustiVec;       // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:53: 855:58
+    let mut _10: usize;                  // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:66: 855:67
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:49
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:29
+        _3 = &'_#10r (*(*((*_1).0: &'_#11r &'_#12r mut PrustiVec))); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:29
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:48
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:38
+        _5 = (*((*_1).1: &'_#13r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:38
+        StorageLive(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:41: 855:48
+        _6 = (*((*_1).2: &'_#14r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:41: 855:48
+        _7 = CheckedAdd(_5, _6);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:48
+        assert(!move (_7.1: bool), "attempt to compute `{} + {}`, which would overflow", move _5, move _6) -> [success: bb1, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:48
+    }
+
+    bb1: {
+        _4 = move (_7.0: usize);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:37: 855:48
+        StorageDead(_6);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:47: 855:48
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:47: 855:48
+        _2 = PrustiVec::lookup(move _3, move _4) -> [return: bb2, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:49
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:30: 855:36
+                                         // + literal: Const { ty: for<'r> fn(&'r PrustiVec, usize) -> u8 {PrustiVec::lookup}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb2: {
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:48: 855:49
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:48: 855:49
+        StorageLive(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:53: 855:68
+        StorageLive(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:53: 855:58
+        _9 = &'_#15r (*(*((*_1).3: &'_#16r &'_#17r PrustiVec))); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:53: 855:58
+        StorageLive(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:66: 855:67
+        _10 = (*((*_1).1: &'_#18r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:66: 855:67
+        _8 = PrustiVec::lookup(move _9, move _10) -> [return: bb3, unwind: bb4]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:53: 855:68
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:59: 855:65
+                                         // + literal: Const { ty: for<'r> fn(&'r PrustiVec, usize) -> u8 {PrustiVec::lookup}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb3: {
+        StorageDead(_10);                // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:67: 855:68
+        StorageDead(_9);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:67: 855:68
+        _0 = Eq(move _2, move _8);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:68
+        StorageDead(_8);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:67: 855:68
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:67: 855:68
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:68: 855:68
+    }
+
+    bb4 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:855:25: 855:68
+    }
+}

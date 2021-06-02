@@ -1,0 +1,35 @@
+// MIR for `closure` 0 renumber
+
+fn closure() -> () {
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:425:14: 425:14
+    let _1: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:9: 426:12
+    scope 1 {
+        debug _cl => _1;                 // in scope 1 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:9: 426:12
+    }
+    scope 2 {
+        debug _prusti_closure => _2;     // in scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6
+    }
+    scope 3 {
+        let _2: [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6]; // in scope 3 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6
+    }
+
+    bb0: {
+        StorageLive(_1);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:9: 426:12
+        StorageLive(_2);                 // scope 3 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6
+        _2 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6]; // scope 3 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6
+                                         // closure
+                                         // + def_id: DefId(0:172 ~ bytevec[8787]::closure::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn((u8, u8)) -> u8,
+                                         //     (),
+                                         // ]
+        FakeRead(ForLet, _2);            // scope 3 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6
+        _1 = _2;                         // scope 2 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:15: 430:6
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:430:5: 430:6
+        FakeRead(ForLet, _1);            // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:426:9: 426:12
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:425:14: 431:2
+        StorageDead(_1);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:431:1: 431:2
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:431:2: 431:2
+    }
+}

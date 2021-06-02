@@ -1,0 +1,20 @@
+// MIR for `prusti_post_item_max_8a5126d8c2f14f5183ba4de512bb6fb3::{closure#1}` 0 renumber
+
+fn prusti_post_item_max_8a5126d8c2f14f5183ba4de512bb6fb3::{closure#1}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:26: 5:37]) -> bool {
+    debug result => (*((*_1).0: &'_#11r u32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:7:1: 13:2
+    debug b => (*((*_1).1: &'_#12r u32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:7:16: 7:17
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:26: 5:37
+    let mut _2: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:26: 5:32
+    let mut _3: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:36: 5:37
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:26: 5:32
+        _2 = (*((*_1).0: &'_#6r u32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:26: 5:32
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:36: 5:37
+        _3 = (*((*_1).1: &'_#7r u32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:36: 5:37
+        _0 = Ge(move _2, move _3);       // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:26: 5:37
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:36: 5:37
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:36: 5:37
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:5:37: 5:37
+    }
+}

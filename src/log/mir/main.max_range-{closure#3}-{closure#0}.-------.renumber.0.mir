@@ -1,0 +1,15 @@
+// MIR for `max_range::{closure#3}::{closure#0}` 0 renumber
+
+fn max_range::{closure#3}::{closure#0}(_1: &'_#6r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:29: 84:34]) -> bool {
+    debug i => (*((*_1).0: &'_#8r u32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:65:13: 65:18
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:29: 84:34
+    let mut _2: u32;                     // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:29: 84:30
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:29: 84:30
+        _2 = (*((*_1).0: &'_#5r u32));   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:29: 84:30
+        _0 = Gt(move _2, const 0_u32);   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:29: 84:34
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:33: 84:34
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:84:34: 84:34
+    }
+}

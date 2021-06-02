@@ -1,0 +1,41 @@
+// MIR for `flip_bytes::{closure#0}` 0 renumber
+
+fn flip_bytes::{closure#0}(_1: &'_#11r [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:9: 255:43]) -> () {
+    debug i => (*((*_1).0: &'_#17r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:248:9: 248:14
+    let mut _0: ();                      // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:9: 255:9
+    let _2: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31
+    let mut _3: &'_#14r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31
+    let _4: [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41]; // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41
+    let mut _5: &'_#16r usize;           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31
+        _3 = &'_#5r (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31
+        _2 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31] { i: move _3 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:25: 255:31
+                                         // closure
+                                         // + def_id: DefId(0:100 ~ main[8787]::flip_bytes::{closure#0}::{closure#0})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#7r usize,),
+                                         // ]
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:30: 255:31
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:30: 255:31
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41
+        StorageLive(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41
+        _5 = &'_#8r (*((*_1).0: &'_#9r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41
+        _4 = [closure@/home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41] { i: move _5 }; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:35: 255:41
+                                         // closure
+                                         // + def_id: DefId(0:101 ~ main[8787]::flip_bytes::{closure#0}::{closure#1})
+                                         // + substs: [
+                                         //     i8,
+                                         //     extern "rust-call" fn(()) -> bool,
+                                         //     (&'_#10r usize,),
+                                         // ]
+        StorageDead(_5);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:40: 255:41
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:40: 255:41
+        _0 = const ();                   // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:9: 255:43
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:255:43: 255:43
+    }
+}

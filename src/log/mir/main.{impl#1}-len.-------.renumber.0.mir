@@ -1,0 +1,11 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 784:2>::len` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:442:1: 784:2>::len(_1: &'_#4r BitVec32) -> usize {
+    debug self => _1;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:459:16: 459:21
+    let mut _0: usize;                   // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:459:26: 459:31
+
+    bb0: {
+        _0 = const 32_usize;             // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:460:9: 460:11
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/main.rs:461:6: 461:6
+    }
+}

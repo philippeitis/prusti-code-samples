@@ -1,0 +1,34 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shl::{closure#1}::{closure#1}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:145:1: 423:2>::shl::{closure#1}::{closure#1}(_1: &'_#8r [closure@/home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:55]) -> bool {
+    debug i => (*((*_1).0: &'_#11r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:238:13: 238:18
+    debug amt => (*((*_1).1: &'_#12r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:236:19: 236:22
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:55
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:50
+    let mut _3: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:42: 246:43
+    let mut _4: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:46: 246:49
+    let mut _5: (usize, bool);           // in scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:50
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:50
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:42: 246:43
+        _3 = (*((*_1).0: &'_#6r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:42: 246:43
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:46: 246:49
+        _4 = (*((*_1).1: &'_#7r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:46: 246:49
+        _5 = CheckedSub(_3, _4);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:50
+        assert(!move (_5.1: bool), "attempt to compute `{} - {}`, which would overflow", move _3, move _4) -> [success: bb1, unwind: bb2]; // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:50
+    }
+
+    bb1: {
+        _2 = move (_5.0: usize);         // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:50
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:49: 246:50
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:49: 246:50
+        _0 = Ge(move _2, const 0_usize); // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:55
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:54: 246:55
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:55: 246:55
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_0/src/bytevec.rs:246:41: 246:55
+    }
+}
