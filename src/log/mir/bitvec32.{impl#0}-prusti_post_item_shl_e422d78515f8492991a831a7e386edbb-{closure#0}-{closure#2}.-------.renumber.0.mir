@@ -1,0 +1,15 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:8:1: 350:2>::prusti_post_item_shl_e422d78515f8492991a831a7e386edbb::{closure#0}::{closure#2}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:8:1: 350:2>::prusti_post_item_shl_e422d78515f8492991a831a7e386edbb::{closure#0}::{closure#2}(_1: &'_#6r [closure@/home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:35: 168:41]) -> bool {
+    debug i => (*((*_1).0: &'_#8r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:167:17: 167:18
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:35: 168:41
+    let mut _2: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:35: 168:36
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:35: 168:36
+        _2 = (*((*_1).0: &'_#5r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:35: 168:36
+        _0 = Lt(move _2, const 32_usize); // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:35: 168:41
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:40: 168:41
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:41: 168:41
+    }
+}

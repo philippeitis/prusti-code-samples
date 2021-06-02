@@ -1,0 +1,34 @@
+// MIR for `<impl at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:8:1: 350:2>::prusti_post_item_shl_f95dad8be07d4230a40607db1c0758de::{closure#0}::{closure#3}` 0 renumber
+
+fn <impl at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:8:1: 350:2>::prusti_post_item_shl_f95dad8be07d4230a40607db1c0758de::{closure#0}::{closure#3}(_1: &'_#9r [closure@/home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:46: 168:63]) -> bool {
+    debug result => (*((*_1).0: &'_#13r BitVec32)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:153:5: 174:6
+    debug i => (*((*_1).1: &'_#14r usize)); // in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:167:17: 167:18
+    let mut _0: bool;                    // return place in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:46: 168:63
+    let mut _2: bool;                    // in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:47: 168:63
+    let mut _3: &'_#12r BitVec32;        // in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:47: 168:53
+    let mut _4: usize;                   // in scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:61: 168:62
+
+    bb0: {
+        StorageLive(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:47: 168:63
+        StorageLive(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:47: 168:53
+        _3 = &'_#6r (*((*_1).0: &'_#7r BitVec32)); // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:47: 168:53
+        StorageLive(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:61: 168:62
+        _4 = (*((*_1).1: &'_#8r usize)); // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:61: 168:62
+        _2 = BitVec32::lookup(move _3, move _4) -> [return: bb1, unwind: bb2]; // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:47: 168:63
+                                         // mir::Constant
+                                         // + span: /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:54: 168:60
+                                         // + literal: Const { ty: for<'r> fn(&'r BitVec32, usize) -> bool {BitVec32::lookup}, val: Value(Scalar(<ZST>)) }
+    }
+
+    bb1: {
+        StorageDead(_4);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:62: 168:63
+        StorageDead(_3);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:62: 168:63
+        _0 = Not(move _2);               // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:46: 168:63
+        StorageDead(_2);                 // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:62: 168:63
+        return;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:63: 168:63
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /home/philippe/VSCodeProjects/prusti_code_samples/src/bitvec32.rs:168:46: 168:63
+    }
+}

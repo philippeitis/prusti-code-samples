@@ -1,0 +1,612 @@
+RwLockReadGuard {
+    lock: RwLock {
+        data: Config {
+            kind: Mutable {
+                defaults: {
+                    Identifier(
+                        "enable_purification_optimization",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "use_more_complete_exhale",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            true,
+                        ),
+                    },
+                    Identifier(
+                        "verify_only_preamble",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "dump_borrowck_info",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "foldunfold_state_filter",
+                    ): Value {
+                        origin: None,
+                        kind: String(
+                            "",
+                        ),
+                    },
+                    Identifier(
+                        "viper_backend",
+                    ): Value {
+                        origin: None,
+                        kind: String(
+                            "Silicon",
+                        ),
+                    },
+                    Identifier(
+                        "dump_debug_info",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "max_log_file_name_length",
+                    ): Value {
+                        origin: None,
+                        kind: Integer(
+                            60,
+                        ),
+                    },
+                    Identifier(
+                        "extra_verifier_args",
+                    ): Value {
+                        origin: None,
+                        kind: Array(
+                            [],
+                        ),
+                    },
+                    Identifier(
+                        "print_collected_verification_items",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "disable_name_mangling",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "contracts_lib",
+                    ): Value {
+                        origin: None,
+                        kind: String(
+                            "",
+                        ),
+                    },
+                    Identifier(
+                        "check_overflows",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "skip_unsupported_features",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "dump_path_ctxt_in_debug_info",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "json_communication",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "full_compilation",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "delete_basic_blocks",
+                    ): Value {
+                        origin: None,
+                        kind: Array(
+                            [],
+                        ),
+                    },
+                    Identifier(
+                        "print_typeckd_specs",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "assert_timeout",
+                    ): Value {
+                        origin: None,
+                        kind: Integer(
+                            10000,
+                        ),
+                    },
+                    Identifier(
+                        "log_dir",
+                    ): Value {
+                        origin: None,
+                        kind: String(
+                            "./log/",
+                        ),
+                    },
+                    Identifier(
+                        "allow_unreachable_unsupported_code",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "verify_only_basic_block_path",
+                    ): Value {
+                        origin: None,
+                        kind: Array(
+                            [],
+                        ),
+                    },
+                    Identifier(
+                        "check_foldunfold_state",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "encode_unsigned_num_constraint",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "be_rustc",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "dump_reborrowing_dag_in_debug_info",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "quiet",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "no_verify",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "intern_names",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            true,
+                        ),
+                    },
+                    Identifier(
+                        "dump_viper_program",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "print_desugared_specs",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "hide_uuids",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "dump_debug_info_during_fold",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "enable_verify_only_basic_block_path",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            false,
+                        ),
+                    },
+                    Identifier(
+                        "simplify_encoding",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            true,
+                        ),
+                    },
+                    Identifier(
+                        "optimizations",
+                    ): Value {
+                        origin: None,
+                        kind: String(
+                            "all",
+                        ),
+                    },
+                    Identifier(
+                        "check_panics",
+                    ): Value {
+                        origin: None,
+                        kind: Boolean(
+                            true,
+                        ),
+                    },
+                    Identifier(
+                        "extra_jvm_args",
+                    ): Value {
+                        origin: None,
+                        kind: Array(
+                            [],
+                        ),
+                    },
+                },
+                overrides: {},
+                sources: [
+                    File {
+                        source: FileSourceFile {
+                            name: "Prusti.toml",
+                        },
+                        format: None,
+                        required: false,
+                    },
+                    File {
+                        source: FileSourceFile {
+                            name: "",
+                        },
+                        format: None,
+                        required: false,
+                    },
+                    Environment {
+                        prefix: Some(
+                            "PRUSTI",
+                        ),
+                        separator: None,
+                        ignore_empty: true,
+                    },
+                    CommandLine {
+                        prefix: Some(
+                            "-P",
+                        ),
+                        separator: "=",
+                        ignore_invalid: true,
+                    },
+                ],
+            },
+            cache: Value {
+                origin: None,
+                kind: Table(
+                    {
+                        "delete_basic_blocks": Value {
+                            origin: None,
+                            kind: Array(
+                                [],
+                            ),
+                        },
+                        "enable_purification_optimization": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "check_foldunfold_state": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "skip_unsupported_features": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "print_typeckd_specs": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "server_address": Value {
+                            origin: Some(
+                                "the environment",
+                            ),
+                            kind: String(
+                                "localhost:35971",
+                            ),
+                        },
+                        "optimizations": Value {
+                            origin: None,
+                            kind: String(
+                                "all",
+                            ),
+                        },
+                        "json_communication": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "assert_timeout": Value {
+                            origin: None,
+                            kind: Integer(
+                                10000,
+                            ),
+                        },
+                        "check_overflows": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "hide_uuids": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "foldunfold_state_filter": Value {
+                            origin: None,
+                            kind: String(
+                                "",
+                            ),
+                        },
+                        "check_panics": Value {
+                            origin: None,
+                            kind: Boolean(
+                                true,
+                            ),
+                        },
+                        "verify_only_preamble": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "contracts_lib": Value {
+                            origin: None,
+                            kind: String(
+                                "",
+                            ),
+                        },
+                        "full_compilation": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "dump_debug_info": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "log_dir": Value {
+                            origin: None,
+                            kind: String(
+                                "./log/",
+                            ),
+                        },
+                        "quiet": Value {
+                            origin: Some(
+                                "the environment",
+                            ),
+                            kind: String(
+                                "true",
+                            ),
+                        },
+                        "simplify_encoding": Value {
+                            origin: None,
+                            kind: Boolean(
+                                true,
+                            ),
+                        },
+                        "print_collected_verification_items": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "extra_verifier_args": Value {
+                            origin: None,
+                            kind: Array(
+                                [],
+                            ),
+                        },
+                        "dump_debug_info_during_fold": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "extra_jvm_args": Value {
+                            origin: None,
+                            kind: Array(
+                                [],
+                            ),
+                        },
+                        "intern_names": Value {
+                            origin: None,
+                            kind: Boolean(
+                                true,
+                            ),
+                        },
+                        "be_rustc": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "use_more_complete_exhale": Value {
+                            origin: None,
+                            kind: Boolean(
+                                true,
+                            ),
+                        },
+                        "print_desugared_specs": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "encode_unsigned_num_constraint": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "viper_backend": Value {
+                            origin: None,
+                            kind: String(
+                                "Silicon",
+                            ),
+                        },
+                        "verify_only_basic_block_path": Value {
+                            origin: None,
+                            kind: Array(
+                                [],
+                            ),
+                        },
+                        "dump_viper_program": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "dump_borrowck_info": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "disable_name_mangling": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "enable_verify_only_basic_block_path": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "dump_reborrowing_dag_in_debug_info": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "max_log_file_name_length": Value {
+                            origin: None,
+                            kind: Integer(
+                                60,
+                            ),
+                        },
+                        "dump_path_ctxt_in_debug_info": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "allow_unreachable_unsupported_code": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "no_verify": Value {
+                            origin: None,
+                            kind: Boolean(
+                                false,
+                            ),
+                        },
+                        "log": Value {
+                            origin: Some(
+                                "the environment",
+                            ),
+                            kind: String(
+                                "info",
+                            ),
+                        },
+                    },
+                ),
+            },
+        },
+    },
+}
