@@ -125,6 +125,16 @@ impl PrustiVec {
             i += 1;
         }
     }
+}
 
+#[predicate]
+fn not_contains(s: &PrustiVec, val: u8) -> bool {
+    forall(|i: usize| 
+        (0 <= i && i < s.len()) ==> s.lookup(i) != val
+    )
+}
 
+#[predicate]
+fn contains(s: &PrustiVec, val: u8) -> bool {
+    !s.not_contains(val)
 }
